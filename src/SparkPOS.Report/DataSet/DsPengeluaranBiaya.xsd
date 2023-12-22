@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsExpenseCost" targetNamespace="http://tempuri.org/DsExpenseCost.xsd" xmlns:mstns="http://tempuri.org/DsExpenseCost.xsd" xmlns="http://tempuri.org/DsExpenseCost.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsExpenseCost" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsExpenseCost" msprop:Generator_UserDSName="DsExpenseCost">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportExpenseCost" msprop:Generator_TableClassName="ReportExpenseCostDataTable" msprop:Generator_TableVarName="tableReportExpenseCost" msprop:Generator_RowChangedName="ReportExpenseCostRowChanged" msprop:Generator_TablePropName="ReportExpenseCost" msprop:Generator_RowDeletingName="ReportExpenseCostRowDeleting" msprop:Generator_RowChangingName="ReportExpenseCostRowChanging" msprop:Generator_RowEvHandlerName="ReportExpenseCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportExpenseCostRowDeleted" msprop:Generator_RowClassName="ReportExpenseCostRow" msprop:Generator_UserTableName="ReportExpenseCost" msprop:Generator_RowEvArgName="ReportExpenseCostRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="invoice" msprop:Generator_ColumnVarNameInTable="columnnota" msprop:Generator_ColumnPropNameInRow="invoice" msprop:Generator_ColumnPropNameInTable="notaColumn" msprop:Generator_UserColumnName="invoice" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="expense_type_id" msprop:Generator_ColumnVarNameInTable="columnexpense_type_id" msprop:Generator_ColumnPropNameInRow="expense_type_id" msprop:Generator_ColumnPropNameInTable="expense_type_idColumn" msprop:Generator_UserColumnName="expense_type_id" type="xs:string" minOccurs="0" />
+              <xs:element name="name_expense_type" msprop:Generator_ColumnVarNameInTable="columnname_expense_type" msprop:Generator_ColumnPropNameInRow="name_expense_type" msprop:Generator_ColumnPropNameInTable="name_expense_typeColumn" msprop:Generator_UserColumnName="name_expense_type" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnjumlah" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="jumlahColumn" msprop:Generator_UserColumnName="quantity" type="xs:double" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnharga" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="hargaColumn" msprop:Generator_UserColumnName="price" type="xs:double" minOccurs="0" />
+              <xs:element name="sub_total" msprop:Generator_ColumnVarNameInTable="columnsub_total" msprop:Generator_ColumnPropNameInRow="sub_total" msprop:Generator_ColumnPropNameInTable="sub_totalColumn" msprop:Generator_UserColumnName="sub_total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReportLoanHeader" msprop:Generator_TableClassName="ReportLoanHeaderDataTable" msprop:Generator_TableVarName="tableReportLoanHeader" msprop:Generator_TablePropName="ReportLoanHeader" msprop:Generator_RowDeletingName="ReportLoanHeaderRowDeleting" msprop:Generator_RowChangingName="ReportLoanHeaderRowChanging" msprop:Generator_RowEvHandlerName="ReportLoanHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportLoanHeaderRowDeleted" msprop:Generator_UserTableName="ReportLoanHeader" msprop:Generator_RowChangedName="ReportLoanHeaderRowChanged" msprop:Generator_RowEvArgName="ReportLoanHeaderRowChangeEvent" msprop:Generator_RowClassName="ReportLoanHeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee_id" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:string" minOccurs="0" />
+              <xs:element name="employee_name" msprop:Generator_ColumnVarNameInTable="columnemployee_name" msprop:Generator_ColumnPropNameInRow="employee_name" msprop:Generator_ColumnPropNameInTable="employee_nameColumn" msprop:Generator_UserColumnName="employee_name" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invoice" msprop:Generator_ColumnVarNameInTable="columnnota" msprop:Generator_ColumnPropNameInRow="invoice" msprop:Generator_ColumnPropNameInTable="notaColumn" msprop:Generator_UserColumnName="invoice" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:double" minOccurs="0" />
+              <xs:element name="total_payment" msprop:Generator_ColumnVarNameInTable="columntotal_repayment" msprop:Generator_ColumnPropNameInRow="total_payment" msprop:Generator_ColumnPropNameInTable="total_repaymentColumn" msprop:Generator_UserColumnName="total_payment" type="xs:double" minOccurs="0" />
+              <xs:element name="remaining" msprop:Generator_ColumnVarNameInTable="columnRemaining" msprop:Generator_ColumnPropNameInRow="remaining" msprop:Generator_ColumnPropNameInTable="RemainingColumn" msprop:Generator_UserColumnName="remaining" type="xs:double" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columnketerangan" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="keteranganColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReportLoanDetail" msprop:Generator_TableClassName="ReportLoanDetailDataTable" msprop:Generator_TableVarName="tableReportLoanDetail" msprop:Generator_TablePropName="ReportLoanDetail" msprop:Generator_RowDeletingName="ReportLoanDetailRowDeleting" msprop:Generator_RowChangingName="ReportLoanDetailRowChanging" msprop:Generator_RowEvHandlerName="ReportLoanDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportLoanDetailRowDeleted" msprop:Generator_UserTableName="ReportLoanDetail" msprop:Generator_RowChangedName="ReportLoanDetailRowChanged" msprop:Generator_RowEvArgName="ReportLoanDetailRowChangeEvent" msprop:Generator_RowClassName="ReportLoanDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee_id" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:string" minOccurs="0" />
+              <xs:element name="employee_name" msprop:Generator_ColumnVarNameInTable="columnemployee_name" msprop:Generator_ColumnPropNameInRow="employee_name" msprop:Generator_ColumnPropNameInTable="employee_nameColumn" msprop:Generator_UserColumnName="employee_name" type="xs:string" minOccurs="0" />
+              <xs:element name="tanggal_kasbon" msdata:Caption="date" msprop:Generator_ColumnVarNameInTable="columntanggal_kasbon" msprop:Generator_ColumnPropNameInRow="tanggal_kasbon" msprop:Generator_ColumnPropNameInTable="tanggal_kasbonColumn" msprop:Generator_UserColumnName="tanggal_kasbon" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="nota_kasbon" msdata:Caption="invoice" msprop:Generator_ColumnVarNameInTable="columnnota_kasbon" msprop:Generator_ColumnPropNameInRow="nota_kasbon" msprop:Generator_ColumnPropNameInTable="nota_kasbonColumn" msprop:Generator_UserColumnName="nota_kasbon" type="xs:string" minOccurs="0" />
+              <xs:element name="jumlah_kasbon" msdata:Caption="amount" msprop:Generator_ColumnVarNameInTable="columnjumlah_kasbon" msprop:Generator_ColumnPropNameInRow="jumlah_kasbon" msprop:Generator_ColumnPropNameInTable="jumlah_kasbonColumn" msprop:Generator_UserColumnName="jumlah_kasbon" type="xs:double" minOccurs="0" />
+              <xs:element name="total_payment" msprop:Generator_ColumnVarNameInTable="columntotal_repayment" msprop:Generator_ColumnPropNameInRow="total_payment" msprop:Generator_ColumnPropNameInTable="total_repaymentColumn" msprop:Generator_UserColumnName="total_payment" type="xs:double" minOccurs="0" />
+              <xs:element name="remaining" msprop:Generator_ColumnVarNameInTable="columnRemaining" msprop:Generator_ColumnPropNameInRow="remaining" msprop:Generator_ColumnPropNameInTable="RemainingColumn" msprop:Generator_UserColumnName="remaining" type="xs:double" minOccurs="0" />
+              <xs:element name="keterangan_kasbon" msdata:Caption="description" msprop:Generator_ColumnVarNameInTable="columnketerangan_kasbon" msprop:Generator_ColumnPropNameInRow="keterangan_kasbon" msprop:Generator_ColumnPropNameInTable="keterangan_kasbonColumn" msprop:Generator_UserColumnName="keterangan_kasbon" type="xs:string" minOccurs="0" />
+              <xs:element name="tanggal_payment" msprop:Generator_ColumnVarNameInTable="columntanggal_payment" msprop:Generator_ColumnPropNameInRow="tanggal_payment" msprop:Generator_ColumnPropNameInTable="tanggal_paymentColumn" msprop:Generator_UserColumnName="tanggal_payment" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="nota_payment" msprop:Generator_ColumnVarNameInTable="columnnota_payment" msprop:Generator_ColumnPropNameInRow="nota_payment" msprop:Generator_ColumnPropNameInTable="nota_paymentColumn" msprop:Generator_UserColumnName="nota_payment" type="xs:string" minOccurs="0" />
+              <xs:element name="jumlah_payment" msprop:Generator_ColumnVarNameInTable="columnjumlah_payment" msprop:Generator_ColumnPropNameInRow="jumlah_payment" msprop:Generator_ColumnPropNameInTable="jumlah_paymentColumn" msprop:Generator_UserColumnName="jumlah_payment" type="xs:double" minOccurs="0" />
+              <xs:element name="keterangan_payment" msprop:Generator_ColumnVarNameInTable="columnketerangan_payment" msprop:Generator_ColumnPropNameInRow="keterangan_payment" msprop:Generator_ColumnPropNameInTable="keterangan_paymentColumn" msprop:Generator_UserColumnName="keterangan_payment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReportSalaryEmployee" msprop:Generator_TableClassName="ReportSalaryEmployeeDataTable" msprop:Generator_TableVarName="tableReportSalaryEmployee" msprop:Generator_RowChangedName="ReportSalaryEmployeeRowChanged" msprop:Generator_TablePropName="ReportSalaryEmployee" msprop:Generator_RowDeletingName="ReportSalaryEmployeeRowDeleting" msprop:Generator_RowChangingName="ReportSalaryEmployeeRowChanging" msprop:Generator_RowEvHandlerName="ReportSalaryEmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportSalaryEmployeeRowDeleted" msprop:Generator_RowClassName="ReportSalaryEmployeeRow" msprop:Generator_UserTableName="ReportSalaryEmployee" msprop:Generator_RowEvArgName="ReportSalaryEmployeeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee_id" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_UserColumnName="employee_id" type="xs:string" minOccurs="0" />
+              <xs:element name="employee_name" msprop:Generator_ColumnVarNameInTable="columnemployee_name" msprop:Generator_ColumnPropNameInRow="employee_name" msprop:Generator_ColumnPropNameInTable="employee_nameColumn" msprop:Generator_UserColumnName="employee_name" type="xs:string" minOccurs="0" />
+              <xs:element name="name_job_titles" msprop:Generator_ColumnVarNameInTable="columnname_job_titles" msprop:Generator_ColumnPropNameInRow="name_job_titles" msprop:Generator_ColumnPropNameInTable="name_job_titlesColumn" msprop:Generator_UserColumnName="name_job_titles" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="time" msprop:Generator_ColumnVarNameInTable="columnjam" msprop:Generator_ColumnPropNameInRow="time" msprop:Generator_ColumnPropNameInTable="jamColumn" msprop:Generator_UserColumnName="time" type="xs:int" minOccurs="0" />
+              <xs:element name="days_worked" msprop:Generator_ColumnVarNameInTable="columnjumlah_day" msprop:Generator_ColumnPropNameInRow="days_worked" msprop:Generator_ColumnPropNameInTable="jumlah_dayColumn" msprop:Generator_UserColumnName="days_worked" type="xs:int" minOccurs="0" />
+              <xs:element name="month" msprop:Generator_ColumnVarNameInTable="columnbulan" msprop:Generator_ColumnPropNameInRow="month" msprop:Generator_ColumnPropNameInTable="bulanColumn" msprop:Generator_UserColumnName="month" type="xs:int" minOccurs="0" />
+              <xs:element name="year" msprop:Generator_ColumnVarNameInTable="columntahun" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnPropNameInTable="tahunColumn" msprop:Generator_UserColumnName="year" type="xs:int" minOccurs="0" />
+              <xs:element name="attendance" msprop:Generator_ColumnVarNameInTable="columnkehadiran" msprop:Generator_ColumnPropNameInRow="attendance" msprop:Generator_ColumnPropNameInTable="kehadiranColumn" msprop:Generator_UserColumnName="attendance" type="xs:int" minOccurs="0" />
+              <xs:element name="absence" msprop:Generator_ColumnVarNameInTable="columnabsen" msprop:Generator_ColumnPropNameInRow="absence" msprop:Generator_ColumnPropNameInTable="absenColumn" msprop:Generator_UserColumnName="absence" type="xs:int" minOccurs="0" />
+              <xs:element name="basic_salary" msprop:Generator_ColumnVarNameInTable="columngaji_pokok" msprop:Generator_ColumnPropNameInRow="basic_salary" msprop:Generator_ColumnPropNameInTable="gaji_pokokColumn" msprop:Generator_UserColumnName="basic_salary" type="xs:double" minOccurs="0" />
+              <xs:element name="overtime" msprop:Generator_ColumnVarNameInTable="columnlembur" msprop:Generator_ColumnPropNameInRow="overtime" msprop:Generator_ColumnPropNameInTable="lemburColumn" msprop:Generator_UserColumnName="overtime" type="xs:double" minOccurs="0" />
+              <xs:element name="bonus" msprop:Generator_ColumnVarNameInTable="columnbonus" msprop:Generator_ColumnPropNameInRow="bonus" msprop:Generator_ColumnPropNameInTable="bonusColumn" msprop:Generator_UserColumnName="bonus" type="xs:double" minOccurs="0" />
+              <xs:element name="deductions" msprop:Generator_ColumnVarNameInTable="columnpotongan" msprop:Generator_ColumnPropNameInRow="deductions" msprop:Generator_ColumnPropNameInTable="potonganColumn" msprop:Generator_UserColumnName="deductions" type="xs:double" minOccurs="0" />
+              <xs:element name="allowance" msprop:Generator_ColumnVarNameInTable="columntunjangan" msprop:Generator_ColumnPropNameInRow="allowance" msprop:Generator_ColumnPropNameInTable="tunjanganColumn" msprop:Generator_UserColumnName="allowance" type="xs:double" minOccurs="0" />
+              <xs:element name="gaji_akhir" msprop:Generator_ColumnVarNameInTable="columngaji_akhir" msprop:Generator_ColumnPropNameInRow="gaji_akhir" msprop:Generator_ColumnPropNameInTable="gaji_akhirColumn" msprop:Generator_UserColumnName="gaji_akhir" type="xs:double" minOccurs="0" />
+              <xs:element name="lembur_akhir" msprop:Generator_ColumnVarNameInTable="columnlembur_akhir" msprop:Generator_ColumnPropNameInRow="lembur_akhir" msprop:Generator_ColumnPropNameInTable="lembur_akhirColumn" msprop:Generator_UserColumnName="lembur_akhir" type="xs:double" minOccurs="0" />
+              <xs:element name="total_gaji" msprop:Generator_ColumnVarNameInTable="columntotal_gaji" msprop:Generator_ColumnPropNameInRow="total_gaji" msprop:Generator_ColumnPropNameInTable="total_gajiColumn" msprop:Generator_UserColumnName="total_gaji" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReportBebanUsaha" msprop:Generator_TableClassName="ReportBebanUsahaDataTable" msprop:Generator_TableVarName="tableReportBebanUsaha" msprop:Generator_TablePropName="ReportBebanUsaha" msprop:Generator_RowDeletingName="ReportBebanUsahaRowDeleting" msprop:Generator_RowChangingName="ReportBebanUsahaRowChanging" msprop:Generator_RowEvHandlerName="ReportBebanUsahaRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportBebanUsahaRowDeleted" msprop:Generator_UserTableName="ReportBebanUsaha" msprop:Generator_RowChangedName="ReportBebanUsahaRowChanged" msprop:Generator_RowEvArgName="ReportBebanUsahaRowChangeEvent" msprop:Generator_RowClassName="ReportBebanUsahaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columnketerangan" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="keteranganColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnjumlah" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="jumlahColumn" msprop:Generator_UserColumnName="quantity" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

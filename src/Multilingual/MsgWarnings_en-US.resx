@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="'City/Regency Origin' should not empty !" xml:space="preserve">
+    <value>'City/Regency Origin' should not empty !</value>
+  </data>
+  <data name="'Code Product' not found !" xml:space="preserve">
+    <value>'Code Product' not found !</value>
+  </data>
+  <data name="'Code Product' should not empty !" xml:space="preserve">
+    <value>'Code Product' should not empty !</value>
+  </data>
+  <data name="'Customer' should not empty !" xml:space="preserve">
+    <value>'Customer' should not empty !</value>
+  </data>
+  <data name="'Number Transactions' is not valid !" xml:space="preserve">
+    <value>'Number Transactions' is not valid !</value>
+  </data>
+  <data name="'Number Transactions' should not be empty !" xml:space="preserve">
+    <value>'Number Transactions' should not be empty !</value>
+  </data>
+  <data name="'Shipping weight' should not be empty !" xml:space="preserve">
+    <value>'Shipping weight' should not be empty !</value>
+  </data>
+  <data name="'Supplier' Cannot be empty !" xml:space="preserve">
+    <value>'Supplier' Cannot be empty !</value>
+  </data>
+  <data name="'Supplier' should not empty !" xml:space="preserve">
+    <value>'Supplier' should not empty !</value>
+  </data>
+  <data name="An error occurred. Please check the error log for details." xml:space="preserve">
+    <value>An error occurred. Please check the error log for details.</value>
+  </data>
+  <data name="Are you sure you want to save this data ???" xml:space="preserve">
+    <value>Are you sure you want to save this data ???</value>
+  </data>
+  <data name="At least 1 product must be input!" xml:space="preserve">
+    <value>At least 1 product must be input!</value>
+  </data>
+  <data name="Backup file storage location Not yet selected !" xml:space="preserve">
+    <value>Backup file storage location Not yet selected !</value>
+  </data>
+  <data name="CategoryNotSelected" xml:space="preserve">
+    <value>لفتح الملف الرئيسي للمنتج يتطلب برنامج MS Excel الإصدار 2007 أو الأحدث.
+
+هل تريد استمرار العملية؟</value>
+  </data>
+  <data name="Check if MS Excel Version 2007 or the latest version is already installed?" xml:space="preserve">
+    <value>Check if MS Excel Version 2007 or the latest version is already installed?</value>
+  </data>
+  <data name="code product" xml:space="preserve">
+    <value>code product</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="Connection to customer display, please try another port." xml:space="preserve">
+    <value>Connection to customer display, please try another port.</value>
+  </data>
+  <data name="Continuing this will log you out and any unsaved changes will be lost. Save your changes before proceeding. Are you sure you want to continue?" xml:space="preserve">
+    <value>Continuing this will log you out and any unsaved changes will be lost. Save your changes before proceeding. Are you sure you want to continue?</value>
+  </data>
+  <data name="Data city/regency origin not found" xml:space="preserve">
+    <value>Data city/regency origin not found</value>
+  </data>
+  <data name="Data file master {0} is still empty." xml:space="preserve">
+    <value>Data file master {0} is still empty.</value>
+  </data>
+  <data name="Data invoice already entered" xml:space="preserve">
+    <value>Data invoice already entered</value>
+  </data>
+  <data name="Data invoice sale not found" xml:space="preserve">
+    <value>Data invoice sale not found</value>
+  </data>
+  <data name="Data payment already entered" xml:space="preserve">
+    <value>Data payment already entered</value>
+  </data>
+  <data name="Data product already entered" xml:space="preserve">
+    <value>Data product already entered</value>
+  </data>
+  <data name="Data product not found" xml:space="preserve">
+    <value>Data product not found</value>
+  </data>
+  <data name="Data purchase invoice not found" xml:space="preserve">
+    <value>Data purchase invoice not found</value>
+  </data>
+  <data name="Data sales Credit not found" xml:space="preserve">
+    <value>Data sales Credit not found</value>
+  </data>
+  <data name="Data supplier not found" xml:space="preserve">
+    <value>Data supplier not found</value>
+  </data>
+  <data name="Data type expense already entered" xml:space="preserve">
+    <value>Data type expense already entered</value>
+  </data>
+  <data name="Data type expense not found" xml:space="preserve">
+    <value>Data type expense not found</value>
+  </data>
+  <data name="Do you want the process to continue ?" xml:space="preserve">
+    <value>Do you want the process to continue ?</value>
+  </data>
+  <data name="Do you want the process to continue?" xml:space="preserve">
+    <value>Do you want the process to continue?</value>
+  </data>
+  <data name="Do you want to cancel the current transaction?" xml:space="preserve">
+    <value>Do you want to cancel the current transaction?</value>
+  </data>
+  <data name="Do you want to continue the printing process ?" xml:space="preserve">
+    <value>Do you want to continue the printing process ?</value>
+  </data>
+  <data name="Do you want to continue the printing process?" xml:space="preserve">
+    <value>Do you want to continue the printing process?</value>
+  </data>
+  <data name="Do you want to continue with the database backup process?" xml:space="preserve">
+    <value>Do you want to continue with the database backup process?</value>
+  </data>
+  <data name="Do you want to delete this data?" xml:space="preserve">
+    <value>Do you want to delete this data?</value>
+  </data>
+  <data name="Employee Not yet selected" xml:space="preserve">
+    <value>Employee Not yet selected</value>
+  </data>
+  <data name="Excel file location and name not yet selected." xml:space="preserve">
+    <value>Excel file location and name not yet selected.</value>
+  </data>
+  <data name="Failed to delete old database !!!" xml:space="preserve">
+    <value>Failed to delete old database !!!</value>
+  </data>
+  <data name="Failed to open master file {0} !!!." xml:space="preserve">
+    <value>Failed to open master file {0} !!!.</value>
+  </data>
+  <data name="File backup Not yet selected !" xml:space="preserve">
+    <value>File backup Not yet selected !</value>
+  </data>
+  <data name="Incorrect user name or password !!!" xml:space="preserve">
+    <value>Incorrect user name or password !!!</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Invalid Tax ID." xml:space="preserve">
+    <value>Invalid Tax ID.</value>
+  </data>
+  <data name="It is recommended to install SparkPOS on 'Drive D'." xml:space="preserve">
+    <value>It is recommended to install SparkPOS on 'Drive D'.</value>
+  </data>
+  <data name="keyMasterExcel" xml:space="preserve">
+    <value>To open the {0} master file requires MS Excel Version 2007 or the latest.
+
+Do you want the process to continue?</value>
+  </data>
+  <data name="KeyValuesPaid" xml:space="preserve">
+    <value>Sorry, the master file {0} is currently open. Please close it first.</value>
+  </data>
+  <data name="Latest update check process has failed." xml:space="preserve">
+    <value>Latest update check process has failed.</value>
+  </data>
+  <data name="Lokasi dan name file Excel Not yet selected." xml:space="preserve">
+    <value>Lokasi dan name file Excel Not yet selected.</value>
+  </data>
+  <data name="Minimum 1 category must selected" xml:space="preserve">
+    <value>Minimum 1 category must selected</value>
+  </data>
+  <data name="Minimum 1 customer must selected" xml:space="preserve">
+    <value>Minimum 1 customer must selected</value>
+  </data>
+  <data name="Minimum 1 employee must selected" xml:space="preserve">
+    <value>Minimum 1 employee must selected</value>
+  </data>
+  <data name="Minimum 1 invoice must entered !" xml:space="preserve">
+    <value>Minimum 1 invoice must entered !</value>
+  </data>
+  <data name="Minimum 1 item expense must entered !" xml:space="preserve">
+    <value>Minimum 1 item expense must entered !</value>
+  </data>
+  <data name="Minimum 1 item product must entered !" xml:space="preserve">
+    <value>Minimum 1 item product must entered !</value>
+  </data>
+  <data name="Minimum 1 product item must be inputted !" xml:space="preserve">
+    <value>Minimum 1 product item must be inputted !</value>
+  </data>
+  <data name="Minimum 1 product must entered !" xml:space="preserve">
+    <value>Minimum 1 product must entered !</value>
+  </data>
+  <data name="Minimum 1 reason must selected" xml:space="preserve">
+    <value>Minimum 1 reason must selected</value>
+  </data>
+  <data name="Minimum 1 supplier must selected" xml:space="preserve">
+    <value>Minimum 1 supplier must selected</value>
+  </data>
+  <data name="Minimum 1 type expense must selected" xml:space="preserve">
+    <value>Minimum 1 type expense must selected</value>
+  </data>
+  <data name="Minimum one name product must selected !" xml:space="preserve">
+    <value>Minimum one name product must selected !</value>
+  </data>
+  <data name="Minimum one position label barcode must selected !" xml:space="preserve">
+    <value>Minimum one position label barcode must selected !</value>
+  </data>
+  <data name="Minimum one position label price must selected !" xml:space="preserve">
+    <value>Minimum one position label price must selected !</value>
+  </data>
+  <data name="MsgDeleteError" xml:space="preserve">
+    <value>Sorry, the data you entered failed to delete! Please try again.
+
+Please try again.</value>
+  </data>
+  <data name="MsgDuplicate" xml:space="preserve">
+    <value>Sorry, the data you entered failed to save! Please try again.
+
+Check if {0} has already been used.</value>
+  </data>
+  <data name="MsgUpdateError" xml:space="preserve">
+    <value>Sorry, the data you entered failed to save! Please try again.
+
+
+
+Please try again.</value>
+  </data>
+  <data name="Name Customer Not yet entered" xml:space="preserve">
+    <value>Name Customer Not yet entered</value>
+  </data>
+  <data name="Name product not allowed empty" xml:space="preserve">
+    <value>Name product not allowed empty</value>
+  </data>
+  <data name="Name supplier Not yet entered" xml:space="preserve">
+    <value>Name supplier Not yet entered</value>
+  </data>
+  <data name="Not yet there Information history payment" xml:space="preserve">
+    <value>Not yet there Information history payment</value>
+  </data>
+  <data name="Password and confirmation password must be the same" xml:space="preserve">
+    <value>Password and confirmation password must be the same</value>
+  </data>
+  <data name="Pay Cash" xml:space="preserve">
+    <value>Pay Cash</value>
+  </data>
+  <data name="Pay via Card" xml:space="preserve">
+    <value>Pay via Card</value>
+  </data>
+  <data name="Please fill in first." xml:space="preserve">
+    <value>Please fill in first.</value>
+  </data>
+  <data name="Please select a customer" xml:space="preserve">
+    <value>Please select a customer</value>
+  </data>
+  <data name="Please uninstall SparkPOS first, then install it again on 'Drive D'." xml:space="preserve">
+    <value>Please uninstall SparkPOS first, then install it again on 'Drive D'.</value>
+  </data>
+  <data name="Product data not found" xml:space="preserve">
+    <value>Product data not found</value>
+  </data>
+  <data name="Product name cannot be empty" xml:space="preserve">
+    <value>Product name cannot be empty</value>
+  </data>
+  <data name="Purchase Credit data not found" xml:space="preserve">
+    <value>Purchase Credit data not found</value>
+  </data>
+  <data name="quantity pay less !" xml:space="preserve">
+    <value>quantity pay less !</value>
+  </data>
+  <data name="Sorry API king postage Not yet set !!!\nCost shipping check process cannot be continued." xml:space="preserve">
+    <value>Sorry API king postage Not yet set !!!\nCost shipping check process cannot be continued.</value>
+  </data>
+  <data name="Sorry connection to database failed !!!" xml:space="preserve">
+    <value>Sorry connection to database failed !!!</value>
+  </data>
+  <data name="Sorry data 'Category' has not been selected yet." xml:space="preserve">
+    <value>Sorry data 'Category' has not been selected yet.</value>
+  </data>
+  <data name="Sorry data 'Category' has not been selected yet.1" xml:space="preserve">
+    <value>Sorry data 'Category' has not been selected yet.</value>
+  </data>
+  <data name="Sorry data failed to delete !" xml:space="preserve">
+    <value>Sorry data failed to delete !</value>
+  </data>
+  <data name="Sorry Dept Payment Purchase cash can not be deleted" xml:space="preserve">
+    <value>Sorry Dept Payment Purchase cash can not be deleted</value>
+  </data>
+  <data name="Sorry file master Category not found." xml:space="preserve">
+    <value>Sorry file master Category not found.</value>
+  </data>
+  <data name="Sorry file master Dropshipper not found." xml:space="preserve">
+    <value>Sorry file master Dropshipper not found.</value>
+  </data>
+  <data name="Sorry file master Product not found." xml:space="preserve">
+    <value>Sorry file master Product not found.</value>
+  </data>
+  <data name="Sorry file master Supplier not found." xml:space="preserve">
+    <value>Sorry file master Supplier not found.</value>
+  </data>
+  <data name="Sorry file master Tax not found." xml:space="preserve">
+    <value>Sorry file master Tax not found.</value>
+  </data>
+  <data name="Sorry payment credit sales cash can not be deleted" xml:space="preserve">
+    <value>Sorry payment credit sales cash can not be deleted</value>
+  </data>
+  <data name="Sorry quantity pay less" xml:space="preserve">
+    <value>Sorry quantity pay less</value>
+  </data>
+  <data name="Sorry report data card stock not found" xml:space="preserve">
+    <value>Sorry report data card stock not found</value>
+  </data>
+  <data name="Sorry report data Credit Card sales not found" xml:space="preserve">
+    <value>Sorry report data Credit Card sales not found</value>
+  </data>
+  <data name="Sorry report data credit sales not found" xml:space="preserve">
+    <value>Sorry report data credit sales not found</value>
+  </data>
+  <data name="Sorry report data customer product not found" xml:space="preserve">
+    <value>Sorry report data customer product not found</value>
+  </data>
+  <data name="Sorry report data Dept Payment Purchase not found" xml:space="preserve">
+    <value>Sorry report data Dept Payment Purchase not found</value>
+  </data>
+  <data name="Sorry report data expense cost not found" xml:space="preserve">
+    <value>Sorry report data expense cost not found</value>
+  </data>
+  <data name="Sorry report data Income and Expense not found&quot;" xml:space="preserve">
+    <value>Sorry report data Income and Expense not found"</value>
+  </data>
+  <data name="Sorry report data loan not found" xml:space="preserve">
+    <value>Sorry report data loan not found</value>
+  </data>
+  <data name="Sorry report data loss profit not found" xml:space="preserve">
+    <value>Sorry report data loss profit not found</value>
+  </data>
+  <data name="Sorry report data payment credit sales not found" xml:space="preserve">
+    <value>Sorry report data payment credit sales not found</value>
+  </data>
+  <data name="Sorry report data return sales not found" xml:space="preserve">
+    <value>Sorry report data return sales not found</value>
+  </data>
+  <data name="Sorry report data salary employee not found" xml:space="preserve">
+    <value>Sorry report data salary employee not found</value>
+  </data>
+  <data name="Sorry report data sales not found" xml:space="preserve">
+    <value>Sorry report data sales not found</value>
+  </data>
+  <data name="Sorry report data sales per Cashier not found" xml:space="preserve">
+    <value>Sorry report data sales per Cashier not found</value>
+  </data>
+  <data name="Sorry report data sales product favorit not found" xml:space="preserve">
+    <value>Sorry report data sales product favorit not found</value>
+  </data>
+  <data name="Sorry report data stock product not found" xml:space="preserve">
+    <value>Sorry report data stock product not found</value>
+  </data>
+  <data name="Sorry report dataStock Adjustment not found" xml:space="preserve">
+    <value>Sorry report dataStock Adjustment not found</value>
+  </data>
+  <data name="Sorry Right Access 'Administrator' can not be deleted" xml:space="preserve">
+    <value>Sorry Right Access 'Administrator' can not be deleted</value>
+  </data>
+  <data name="Sorry Right Access 'Administrator' cannot be edited" xml:space="preserve">
+    <value>Sorry Right Access 'Administrator' cannot be edited</value>
+  </data>
+  <data name="Sorry the data you found was not found" xml:space="preserve">
+    <value>Sorry the data you found was not found</value>
+  </data>
+  <data name="Sorry, Purchase data report was not found" xml:space="preserve">
+    <value>Sorry, Purchase data report was not found</value>
+  </data>
+  <data name="Sorry, quantity payment exceeds  remaining credit" xml:space="preserve">
+    <value>Sorry, quantity payment exceeds  remaining credit</value>
+  </data>
+  <data name="Sorry, quantity payment exceeds  remaining debt" xml:space="preserve">
+    <value>Sorry, quantity payment exceeds  remaining debt</value>
+  </data>
+  <data name="Sorry, quantity return should not exceeds  quantity sale" xml:space="preserve">
+    <value>Sorry, quantity return should not exceeds  quantity sale</value>
+  </data>
+  <data name="Sorry, the Customer master file was not found." xml:space="preserve">
+    <value>Sorry, the Customer master file was not found.</value>
+  </data>
+  <data name="Sorry, the data card debt purchase report was not found" xml:space="preserve">
+    <value>Sorry, the data card debt purchase report was not found</value>
+  </data>
+  <data name="Sorry, the data entry is incomplete!" xml:space="preserve">
+    <value>Sorry, the data entry is incomplete!</value>
+  </data>
+  <data name="Sorry, the data you entered failed to save! Please try again." xml:space="preserve">
+    <value>Sorry, the data you entered failed to save! Please try again.</value>
+  </data>
+  <data name="Sorry, the date range is wrong !!!" xml:space="preserve">
+    <value>Sorry, the date range is wrong !!!</value>
+  </data>
+  <data name="Sorry, the master file format {0} is invalid, the import process cannot continue." xml:space="preserve">
+    <value>Sorry, the master file format {0} is invalid, the import process cannot continue.</value>
+  </data>
+  <data name="Sorry, the Online Update link/URL has not been set yet!!!" xml:space="preserve">
+    <value>Sorry, the Online Update link/URL has not been set yet!!!</value>
+  </data>
+  <data name="Sorry, the Online Update link/URL has not been set yet!!!\nLatest update check process has failed." xml:space="preserve">
+    <value>Sorry, the Online Update link/URL has not been set yet!!!\nLatest update check process has failed.</value>
+  </data>
+  <data name="Sorry, the quantity returned cannot exceed the quantity sold" xml:space="preserve">
+    <value>Sorry, the quantity returned cannot exceed the quantity sold</value>
+  </data>
+  <data name="Sorry, you do not have the authority to access this menu" xml:space="preserve">
+    <value>Sorry, you do not have the authority to access this menu</value>
+  </data>
+  <data name="The database restore process failed." xml:space="preserve">
+    <value>The database restore process failed.</value>
+  </data>
+  <data name="The page is currently unavailable:" xml:space="preserve">
+    <value>The page is currently unavailable:</value>
+  </data>
+  <data name="This data is already being used for another process." xml:space="preserve">
+    <value>This data is already being used for another process.</value>
+  </data>
+  <data name="To open the {0} master file requires MS Excel Version 2007 or the latest." xml:space="preserve">
+    <value>To open the {0} master file requires MS Excel Version 2007 or the latest.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="You have not completed the input of product data !" xml:space="preserve">
+    <value>You have not completed the input of product data !</value>
+  </data>
+  <data name="You have not completed the payment data input !" xml:space="preserve">
+    <value>You have not completed the payment data input !</value>
+  </data>
+  <data name="You haven't completed the product data input yet!" xml:space="preserve">
+    <value>You haven't completed the product data input yet!</value>
+  </data>
+  <data name="Your trial has expired. Please purchase a license to continue using the application." xml:space="preserve">
+    <value>Your trial has expired. Please purchase a license to continue using the application.</value>
+  </data>
+</root>

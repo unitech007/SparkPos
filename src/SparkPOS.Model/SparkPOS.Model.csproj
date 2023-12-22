@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B9CABAD-1A6C-4323-8548-BD5F3C12613C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SparkPOS.Model</RootNamespace>
+    <AssemblyName>SparkPOS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\lib\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DeliveryNotesSales .cs" />
+    <Compile Include="QuotationSales.cs" />
+    <Compile Include="Reference\Tax.cs" />
+    <Compile Include="Settings\SettingCustomerDisplay.cs" />
+    <Compile Include="Settings\SettingPort.cs" />
+    <Compile Include="Settings\SettingLebarColumnTabelTransactions.cs" />
+    <Compile Include="Reference\LabelPriceProduct.cs" />
+    <Compile Include="Reference\SettingsLabelPrice.cs" />
+    <Compile Include="Report\ReportLossProfit.cs" />
+    <Compile Include="Transaction\AddressShipping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reference\ReasonAdjustmentStock.cs" />
+    <Compile Include="Transaction\FinancialYear.cs" />
+    <Compile Include="Transaction\ItemSellingDeliveryNotes.cs" />
+    <Compile Include="Transaction\ItemSellingQuotation.cs" />
+    <Compile Include="Transaction\PurchaseProduct.cs" />
+    <Compile Include="Reference\Customer.cs" />
+    <Compile Include="DatabaseVersion.cs" />
+    <Compile Include="Reference\Dropshipper.cs" />
+    <Compile Include="Transaction\FooterInvoiceMiniPos.cs" />
+    <Compile Include="Expenses\SalaryEmployee.cs" />
+    <Compile Include="Reference\PriceWholesale.cs" />
+    <Compile Include="Transaction\HeaderInvoice.cs" />
+    <Compile Include="Transaction\HeaderInvoiceMiniPos.cs" />
+    <Compile Include="Expenses\ItemExpenseCost.cs" />
+    <Compile Include="Reference\Regency.cs" />
+    <Compile Include="Reference\RegencyShippingCostsByRaja.cs" />
+    <Compile Include="Reference\RegencyAsalRajaOngkir.cs" />
+    <Compile Include="Reference\RegencyTujuanRajaOngkir.cs" />
+    <Compile Include="Reference\Card.cs" />
+    <Compile Include="Expenses\loan.cs" />
+    <Compile Include="Reference\Kecamatan.cs" />
+    <Compile Include="Transaction\PaymentHistoryType.cs" />
+    <Compile Include="Reference\Provinsi.cs" />
+    <Compile Include="Reference\Region.cs" />
+    <Compile Include="Transaction\LabelAddressShipping.cs" />
+    <Compile Include="Transaction\LabelInvoice.cs" />
+    <Compile Include="Transaction\CashierMachine.cs" />
+    <Compile Include="Invoice\InvoicePurchase.cs" />
+    <Compile Include="Invoice\InvoiceSales.cs" />
+    <Compile Include="Expenses\PaymentLoan.cs" />
+    <Compile Include="Settings\GeneralSupplier.cs" />
+    <Compile Include="Expenses\ExpenseCost.cs" />
+    <Compile Include="Reference\ProvinsiRajaOngkir.cs" />
+    <Compile Include="RajaOngkir\cost.cs" />
+    <Compile Include="RajaOngkir\costs.cs" />
+    <Compile Include="RajaOngkir\destination_details.cs" />
+    <Compile Include="RajaOngkir\origin_details.cs" />
+    <Compile Include="RajaOngkir\query.cs" />
+    <Compile Include="RajaOngkir\rajaongkir.cs" />
+    <Compile Include="RajaOngkir\results.cs" />
+    <Compile Include="RajaOngkir\root.cs" />
+    <Compile Include="RajaOngkir\status.cs" />
+    <Compile Include="Report\ReportBebanUsaha.cs" />
+    <Compile Include="Report\ReportCustomerProduct.cs" />
+    <Compile Include="Report\ReportSalaryEmployee.cs" />
+    <Compile Include="Report\ReportDebtProductPurchaseDetail.cs" />
+    <Compile Include="Report\ReportDebtProductPurchaseHeader.cs" />
+    <Compile Include="Report\ReportCardDebt.cs" />
+    <Compile Include="Report\ReportCardCredit.cs" />
+    <Compile Include="Report\ReportCardStock.cs" />
+    <Compile Include="Report\ReportLoanDetail.cs" />
+    <Compile Include="Report\ReportLoanHeader.cs" />
+    <Compile Include="Report\ReportCashierMachine.cs" />
+    <Compile Include="Report\ReportRevenueExpense.cs" />
+    <Compile Include="Report\ReportDebtPaymentProductPurchaseDetail.cs" />
+    <Compile Include="Report\ReportDebtPaymentProductPurchaseHeader.cs" />
+    <Compile Include="Report\ReportPaymentCreditSalesProductDetail.cs" />
+    <Compile Include="Report\ReportPaymentCreditSalesProductHeader.cs" />
+    <Compile Include="Report\ReportProductPurchaseDetail.cs" />
+    <Compile Include="Report\ReportProductPurchaseHeader.cs" />
+    <Compile Include="EntityState.cs" />
+    <Compile Include="Reference\Category.cs" />
+    <Compile Include="Transaction\ItemPurchaseProduct.cs" />
+    <Compile Include="Transaction\ItemSellingProduct.cs" />
+    <Compile Include="Reference\ItemMenu.cs" />
+    <Compile Include="Transaction\ItemDebtPaymentProduct.cs" />
+    <Compile Include="Transaction\ItemPaymentCreditProduct.cs" />
+    <Compile Include="Transaction\ItemReturnPurchaseProduct.cs" />
+    <Compile Include="Transaction\ItemReturJualProduk.cs" />
+    <Compile Include="Reference\job_titles.cs" />
+    <Compile Include="Reference\JenisPengeluaran.cs" />
+    <Compile Include="Transaction\SellingProduct.cs" />
+    <Compile Include="Reference\Employee.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Reference\MenuApplication.cs" />
+    <Compile Include="ModelExtension.cs" />
+    <Compile Include="Transaction\DebtPaymentProduct.cs" />
+    <Compile Include="Transaction\PaymentCreditProduct.cs" />
+    <Compile Include="Settings\User.cs" />
+    <Compile Include="Reference\AdjustmentStock.cs" />
+    <Compile Include="Reference\Product.cs" />
+    <Compile Include="Settings\Profil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reference\ReferencesType.cs" />
+    <Compile Include="Report\ReportExpenseCost.cs" />
+    <Compile Include="Report\ReportSalesPerCashier.cs" />
+    <Compile Include="Report\ReportSalesProduct.cs" />
+    <Compile Include="Report\ReportSalesProductDetail.cs" />
+    <Compile Include="Report\ReportSalesProductHeader.cs" />
+    <Compile Include="Report\ReportSalesProductPerCategory.cs" />
+    <Compile Include="Report\ReportAdjustmentStockProduct.cs" />
+    <Compile Include="Report\ReportCreditSalesProductDetail.cs" />
+    <Compile Include="Report\ReportCreditSalesProductHeader.cs" />
+    <Compile Include="Report\ReportCreditSalesProduct.cs" />
+    <Compile Include="Report\ReportProdukFavorit.cs" />
+    <Compile Include="Report\ReportReturnProductPurchaseDetail.cs" />
+    <Compile Include="Report\ReportReturnProductPurchaseHeader.cs" />
+    <Compile Include="Report\ReportReturnSalesProductDetail.cs" />
+    <Compile Include="Report\ReportReturnSalesProductHeader.cs" />
+    <Compile Include="Report\ReportStokProduk.cs" />
+    <Compile Include="Transaction\ReturnPurchaseProduct.cs" />
+    <Compile Include="Transaction\ReturnSellingProduct.cs" />
+    <Compile Include="Settings\Role.cs" />
+    <Compile Include="Settings\RolePrivilege.cs" />
+    <Compile Include="Reference\SettingsBarcode.cs" />
+    <Compile Include="Settings\SettingApplication.cs" />
+    <Compile Include="Reference\Shift.cs" />
+    <Compile Include="Reference\Supplier.cs" />
+    <Compile Include="Transaction\SellingDeliveryNotes.cs" />
+    <Compile Include="Transaction\SellingQuotation.cs" />
+    <Compile Include="ValidationError.cs" />
+    <Compile Include="WebAPI\OpenRetailWebApiGetResponse.cs" />
+    <Compile Include="WebAPI\OpenRetailWebApiPostResponse.cs" />
+    <Compile Include="WebAPI\Status.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

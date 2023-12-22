@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24E6FAE6-2F30-4B86-BBE7-4C88FB631956}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SparkPOS.Bll.Api</RootNamespace>
+    <AssemblyName>SparkPOS.Bll.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Reference\ITaxBll.cs" />
+    <Compile Include="Reference\IReasonAdjustmentStockBll.cs" />
+    <Compile Include="Reference\ICategoryBll.cs" />
+    <Compile Include="Reference\IPriceWholesaleBll.cs" />
+    <Compile Include="Report\IReportLossProfitBll.cs" />
+    <Compile Include="Transaction\IAddressShippingBll.cs" />
+    <Compile Include="IBaseBll.cs" />
+    <Compile Include="Transaction\IPrintSellingDeliveryNotesBll.cs" />
+    <Compile Include="Transaction\IPrintQuotationBll.cs" />
+    <Compile Include="Transaction\IPurchaseProductBll.cs" />
+    <Compile Include="Transaction\IPrintInvoiceBll.cs" />
+    <Compile Include="Reference\ICustomerBll.cs" />
+    <Compile Include="IDatabaseVersionBll.cs" />
+    <Compile Include="IDbConnectionHelper.cs" />
+    <Compile Include="Reference\IDropshipperBll.cs" />
+    <Compile Include="Transaction\IFooterInvoiceMiniPosBll.cs" />
+    <Compile Include="Expenses\ISalaryEmployeeBll.cs" />
+    <Compile Include="Transaction\IHeaderInvoiceBll.cs" />
+    <Compile Include="Transaction\IHeaderInvoiceMiniPosBll.cs" />
+    <Compile Include="Reference\IImportExportDataBll.cs" />
+    <Compile Include="Reference\IItemMenuBll.cs" />
+    <Compile Include="Reference\ITitlesBll.cs" />
+    <Compile Include="Reference\ITypeExpenseBll.cs" />
+    <Compile Include="Transaction\ISellingProductBll.cs" />
+    <Compile Include="Reference\IRegencyShippingCostsByRajaBll.cs" />
+    <Compile Include="Reference\ICardBll.cs" />
+    <Compile Include="Reference\IEmployeeBll.cs" />
+    <Compile Include="Expenses\ILoanBll.cs" />
+    <Compile Include="Reference\IRegionBll.cs" />
+    <Compile Include="Transaction\ILabelAddressShippingBll.cs" />
+    <Compile Include="Transaction\ILabelInvoiceBll.cs" />
+    <Compile Include="Reference\IMenuBll.cs" />
+    <Compile Include="Transaction\ICashierMachineBll.cs" />
+    <Compile Include="Transaction\IDebtPaymentProductBll.cs" />
+    <Compile Include="Expenses\IPaymentLoanBll.cs" />
+    <Compile Include="Transaction\IPaymentCreditProductBll.cs" />
+    <Compile Include="Expenses\IExpenseCostBll.cs" />
+    <Compile Include="Settings\IUserBll.cs" />
+    <Compile Include="Reference\IAdjustmentStockBll.cs" />
+    <Compile Include="Reference\IProductBll.cs" />
+    <Compile Include="Settings\IProfilBll.cs" />
+    <Compile Include="Transaction\IReturnPurchaseProductBll.cs" />
+    <Compile Include="Transaction\IReturnSellingProductBll.cs" />
+    <Compile Include="Settings\IRoleBll.cs" />
+    <Compile Include="Settings\IRolePrivilegeBll.cs" />
+    <Compile Include="Settings\ISettingApplicationBll.cs" />
+    <Compile Include="Reference\ISupplierBll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\IBaseReportBll.cs" />
+    <Compile Include="Report\IReportPurchaseProductBll.cs" />
+    <Compile Include="Report\IReportSalaryEmployeeBll.cs" />
+    <Compile Include="Report\IReportDebtPurchaseProductBll.cs" />
+    <Compile Include="Report\IReportSellingProductBll.cs" />
+    <Compile Include="Report\IReportCardDebtBll.cs" />
+    <Compile Include="Report\IReportCardCreditBll.cs" />
+    <Compile Include="Report\IReportCardStockBll.cs" />
+    <Compile Include="Report\IReportLoanBll.cs" />
+    <Compile Include="Report\IReportCashierMachineBll.cs" />
+    <Compile Include="Report\IReportRevenueExpenseBll.cs" />
+    <Compile Include="Report\IReportDebtPaymentPurchaseProductBll.cs" />
+    <Compile Include="Report\IReportPaymentCreditSellingProductBll.cs" />
+    <Compile Include="Report\IReportExpenseCostBll.cs" />
+    <Compile Include="Report\IReportCreditSellingProductBll.cs" />
+    <Compile Include="Report\IReportReturnPurchaseProductBll.cs" />
+    <Compile Include="Report\IReportReturnSellingProductBll.cs" />
+    <Compile Include="Report\IReportStockProductBll.cs" />
+    <Compile Include="Transaction\ISellingDeliveryNotesBll.cs" />
+    <Compile Include="Transaction\ISellingQuotationBll.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SparkPOS.Model\SparkPOS.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>SparkPOS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

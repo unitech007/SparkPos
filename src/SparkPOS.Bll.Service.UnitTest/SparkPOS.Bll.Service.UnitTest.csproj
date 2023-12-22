@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A96A2C8C-B335-4B27-A11A-CF0098E9AB12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SparkPOS.Bll.Service.UnitTest</RootNamespace>
+    <AssemblyName>SparkPOS.Bll.Service.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Npgsql.2.2.7\lib\net40\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Npgsql.2.2.7\lib\net40\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Expenses\SalaryEmployeeWebAPIBllTest.cs" />
+    <Compile Include="Expenses\KasbonWebAPIBllTest.cs" />
+    <Compile Include="Expenses\PaymentLoanWebAPIBllTest.cs" />
+    <Compile Include="Reference\ReasonAdjustmentStockWebAPIBllTest.cs" />
+    <Compile Include="Reference\CustomerWebAPIBllTest.cs" />
+    <Compile Include="Reference\DropshipperWebAPIBllTest.cs" />
+    <Compile Include="Reference\CategoryWebAPIBllTest.cs" />
+    <Compile Include="Reference\TitlesWebAPIBllTest.cs" />
+    <Compile Include="Reference\TypeExpenseWebAPIBllTest.cs" />
+    <Compile Include="Reference\EmployeeWebAPIBllTest.cs" />
+    <Compile Include="Expenses\ExpenseCostWebAPIBllTest.cs" />
+    <Compile Include="Reference\AdjustmentStockWebAPIBllTest.cs" />
+    <Compile Include="Reference\ProductWebAPIBllTest.cs" />
+    <Compile Include="Reference\ReasonAdjustmentStockBllTest.cs" />
+    <Compile Include="Reference\CardWebAPIBllTest.cs" />
+    <Compile Include="Reference\SupplierWebAPIBllTest.cs" />
+    <Compile Include="Transaction\PurchaseProductBllTest.cs" />
+    <Compile Include="Transaction\PrintInvoiceBllTest.cs" />
+    <Compile Include="Reference\CustomerBllTest.cs" />
+    <Compile Include="DatabaseVersionBllTest.cs" />
+    <Compile Include="Reference\DropshipperBllTest.cs" />
+    <Compile Include="Transaction\FooterInvoiceMiniPosBllTest.cs" />
+    <Compile Include="Expenses\SalaryEmployeeBllTest.cs" />
+    <Compile Include="Reference\CategoryBllTest.cs" />
+    <Compile Include="Transaction\HeaderInvoiceBllTest.cs" />
+    <Compile Include="Transaction\HeaderInvoiceMiniPosBllTest.cs" />
+    <Compile Include="Reference\ImportExportDataCustomerBllTest.cs" />
+    <Compile Include="Reference\ImportExportDataGolonganBllTest.cs" />
+    <Compile Include="Reference\ImportExportDataProdukBllTest.cs" />
+    <Compile Include="Reference\ImportExportDataSupplierBllTest.cs" />
+    <Compile Include="Reference\TitlesBllTest.cs" />
+    <Compile Include="Reference\TypeExpenseBllTest.cs" />
+    <Compile Include="Transaction\SellingProductBllTest.cs" />
+    <Compile Include="Reference\RegencyBllTest.cs" />
+    <Compile Include="Reference\CardBllTest.cs" />
+    <Compile Include="Reference\EmployeeBllTest.cs" />
+    <Compile Include="Expenses\LoanBllTest.cs" />
+    <Compile Include="Reference\MenuBllTest.cs" />
+    <Compile Include="Transaction\CashierMachineBllTest.cs" />
+    <Compile Include="Transaction\DebtPaymentProductBllTest.cs" />
+    <Compile Include="Expenses\PaymentLoanBllTest.cs" />
+    <Compile Include="Transaction\PaymentCreditProductBllTest.cs" />
+    <Compile Include="Expenses\ExpenseCostBllTest.cs" />
+    <Compile Include="Settings\UserBllTest.cs" />
+    <Compile Include="Reference\AdjustmentStockBllTest.cs" />
+    <Compile Include="Reference\ProductBllTest.cs" />
+    <Compile Include="Settings\ProfilBllTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportPurchaseProductBllTest.cs" />
+    <Compile Include="Report\ReportSalaryEmployeeBllTest.cs" />
+    <Compile Include="Report\ReportDebtPurchaseProductBllTest.cs" />
+    <Compile Include="Report\ReportSellingProductBllTest.cs" />
+    <Compile Include="Report\ReportCardDebtBllTest.cs" />
+    <Compile Include="Report\ReportCardCreditBllTest.cs" />
+    <Compile Include="Report\ReportCardStockBllTest.cs" />
+    <Compile Include="Report\ReportCashierMachineBllTest.cs" />
+    <Compile Include="Report\ReportLoanBllTest.cs" />
+    <Compile Include="Report\ReportRevenueExpenseBllTest.cs" />
+    <Compile Include="Report\ReportDebtPaymentPurchaseProductBllTest.cs" />
+    <Compile Include="Report\ReportPaymentCreditSellingProductBllTest.cs" />
+    <Compile Include="Report\ReportExpenseCostBllTest.cs" />
+    <Compile Include="Report\ReportCreditSellingProductBllTest.cs" />
+    <Compile Include="Report\ReportReturnPurchaseProductBllTest.cs" />
+    <Compile Include="Report\ReportReturJualProdukBllTest.cs" />
+    <Compile Include="Report\ReportStockProductBllTest.cs" />
+    <Compile Include="Transaction\ReturnPurchaseProductBllTest.cs" />
+    <Compile Include="Transaction\ReturnSellingProductBllTest.cs" />
+    <Compile Include="Settings\RoleBllTest.cs" />
+    <Compile Include="Settings\RolePrivilegeBllTest.cs" />
+    <Compile Include="Settings\SettingApplicationBllTest.cs" />
+    <Compile Include="Reference\SupplierBllTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SparkPOS.Bll.Api\SparkPOS.Bll.Api.csproj">
+      <Project>{24e6fae6-2f30-4b86-bbe7-4c88fb631956}</Project>
+      <Name>SparkPOS.Bll.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SparkPOS.Bll.Service\SparkPOS.Bll.Service.csproj">
+      <Project>{2a5e29ae-358a-4129-b28a-9a1425a90de0}</Project>
+      <Name>SparkPOS.Bll.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SparkPOS.Model\SparkPOS.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>SparkPOS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFEF9DEE-C608-4160-BAEC-1723185677F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SparkPOS.Repository.Service</RootNamespace>
+    <AssemblyName>SparkPOS.Repository.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\lib\Npgsql.2.2.7\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Reference\TaxWebAPIRepository.cs" />
+    <Compile Include="Reference\TaxRepository.cs" />
+    <Compile Include="Report\ReportLossProfitRepository.cs" />
+    <Compile Include="Report\ReportSellingQuotationRepository.cs" />
+    <Compile Include="Transaction\DebtPaymentProductWebAPIRepository.cs" />
+    <Compile Include="Transaction\PaymentCreditProductWebAPIRepository.cs" />
+    <Compile Include="Transaction\PrintDeliveryNotesRepository .cs" />
+    <Compile Include="Transaction\PrintQuotationRepository.cs" />
+    <Compile Include="Transaction\PrintQuotationSampleRepository.cs" />
+    <Compile Include="Transaction\PurchaseProductWebAPIRepository.cs" />
+    <Compile Include="Transaction\SellingProductWebAPIRepository.cs" />
+    <Compile Include="Expenses\SalaryEmployeeWebAPIRepository.cs" />
+    <Compile Include="Expenses\LoanWebAPIRepository.cs" />
+    <Compile Include="Expenses\PaymentLoanWebAPIRepository.cs" />
+    <Compile Include="Reference\ReasonAdjustmentStockWebAPIRepository.cs" />
+    <Compile Include="Reference\CustomerWebAPIRepository.cs" />
+    <Compile Include="Reference\DropshipperWebAPIRepository.cs" />
+    <Compile Include="Reference\CategoryWebAPIRepository.cs" />
+    <Compile Include="Reference\TitlesWebAPIRepository.cs" />
+    <Compile Include="Reference\TypeExpenseWebAPIRepository.cs" />
+    <Compile Include="Reference\CardWebAPIRepository.cs" />
+    <Compile Include="Reference\EmployeeWebAPIRepository.cs" />
+    <Compile Include="Expenses\ExpenseCostWebAPIRepository.cs" />
+    <Compile Include="Reference\AdjustmentStockWebAPIRepository.cs" />
+    <Compile Include="Reference\ProdukWebAPIRepository.cs" />
+    <Compile Include="Reference\ReasonAdjustmentStockRepository.cs" />
+    <Compile Include="Reference\SupplierWebAPIRepository.cs" />
+    <Compile Include="Transaction\PurchaseProductRepository.cs" />
+    <Compile Include="Transaction\PrintInvoiceSampleRepository.cs" />
+    <Compile Include="Transaction\PrintInvoiceRepository.cs" />
+    <Compile Include="Reference\CustomerRepository.cs" />
+    <Compile Include="DapperContext.cs" />
+    <Compile Include="DatabaseVersionRepository.cs" />
+    <Compile Include="Reference\DropshipperRepository.cs" />
+    <Compile Include="Transaction\FooterInvoiceMiniPosRepository.cs" />
+    <Compile Include="Expenses\SalaryEmployeeRepository.cs" />
+    <Compile Include="Reference\CategoryRepository.cs" />
+    <Compile Include="Reference\PriceWholesaleRepository.cs" />
+    <Compile Include="Transaction\HeaderInvoiceMiniPosRepository.cs" />
+    <Compile Include="Transaction\HeaderInvoiceRepository.cs" />
+    <Compile Include="Reference\ItemMenuRepository.cs" />
+    <Compile Include="Reference\TitlesRepository.cs" />
+    <Compile Include="Reference\TypeExpenseRepository.cs" />
+    <Compile Include="Transaction\SellingProductRepository.cs" />
+    <Compile Include="Reference\RegencyShippingCostsByRajaRepository.cs" />
+    <Compile Include="Reference\CardRepository.cs" />
+    <Compile Include="Reference\EmployeeRepository.cs" />
+    <Compile Include="Expenses\LoanRepository.cs" />
+    <Compile Include="Reference\RegionRepository.cs" />
+    <Compile Include="Transaction\LabelInvoiceRepository.cs" />
+    <Compile Include="Log4NetRepository.cs" />
+    <Compile Include="Reference\MenuRepository.cs" />
+    <Compile Include="Transaction\CashierMachineRepository.cs" />
+    <Compile Include="Transaction\DebtPaymentProductRepository.cs" />
+    <Compile Include="Expenses\PaymentLoanRepository.cs" />
+    <Compile Include="Transaction\PaymentCreditProductRepository.cs" />
+    <Compile Include="Expenses\ExpenseCostRepository.cs" />
+    <Compile Include="Settings\UserRepository.cs" />
+    <Compile Include="Reference\AdjustmentStockRepository.cs" />
+    <Compile Include="Reference\ProductRepository.cs" />
+    <Compile Include="Settings\ProfilRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportPurchaseProductRepository.cs" />
+    <Compile Include="Report\ReportSalaryEmployeeRepository.cs" />
+    <Compile Include="Report\ReportDebtPurchaseProductRepository.cs" />
+    <Compile Include="Report\ReportSellingProductRepository.cs" />
+    <Compile Include="Report\ReportCardDebtRepository.cs" />
+    <Compile Include="Report\ReportCardCreditRepository.cs" />
+    <Compile Include="Report\ReportCardStockRepository.cs" />
+    <Compile Include="Report\ReportLoanRepository.cs" />
+    <Compile Include="Report\ReportCashierMachineRepository.cs" />
+    <Compile Include="Report\ReportRevenueExpenseRepository.cs" />
+    <Compile Include="Report\ReportDebtPaymentPurchaseProductRepository.cs" />
+    <Compile Include="Report\ReportPaymentCreditSellingProductRepository.cs" />
+    <Compile Include="Report\ReportExpenseCostRepository.cs" />
+    <Compile Include="Report\ReportCreditSellingProductRepository.cs" />
+    <Compile Include="Report\ReportReturnPurchaseProductRepository.cs" />
+    <Compile Include="Report\ReportReturnSellingProductRepository.cs" />
+    <Compile Include="Report\ReportStockProductRepository.cs" />
+    <Compile Include="Transaction\ReturnPurchaseProductRepository.cs" />
+    <Compile Include="Transaction\ReturnSellingProductRepository.cs" />
+    <Compile Include="Settings\RolePrivilegeRepository.cs" />
+    <Compile Include="Settings\RoleRepository.cs" />
+    <Compile Include="Settings\SettingApplicationRepository.cs" />
+    <Compile Include="Reference\SupplierRepository.cs" />
+    <Compile Include="Transaction\SellingDeliveryNotesRepository.cs" />
+    <Compile Include="Transaction\SellingQuotationRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="WhereBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SparkPOS.Helper\SparkPOS.Helper.csproj">
+      <Project>{3316e651-8404-4cd4-a132-2b013489de67}</Project>
+      <Name>SparkPOS.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SparkPOS.Model\SparkPOS.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>SparkPOS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SparkPOS.Repository.Api\SparkPOS.Repository.Api.csproj">
+      <Project>{981af3c6-f601-45ad-9f33-abbc7cc1f00f}</Project>
+      <Name>SparkPOS.Repository.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

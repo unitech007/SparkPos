@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="'Code Product' not found !" xml:space="preserve">
+    <value>"كود المنتج" غير موجود!</value>
+  </data>
+  <data name="'Code Product' should not empty !" xml:space="preserve">
+    <value>يجب ألا يكون "منتج الكود" فارغًا!</value>
+  </data>
+  <data name="'Customer' should not empty !" xml:space="preserve">
+    <value>يجب ألا يكون "العميل" فارغًا!</value>
+  </data>
+  <data name="'Number Transactions' is not valid !" xml:space="preserve">
+    <value>"عدد المعاملات" غير صالح!</value>
+  </data>
+  <data name="'Number Transactions' should not be empty !" xml:space="preserve">
+    <value>يجب ألا يكون حقل "عدد المعاملات" فارغًا!</value>
+  </data>
+  <data name="'Shipping weight' should not be empty !" xml:space="preserve">
+    <value>يجب ألا يكون "وزن الشحن" فارغًا!</value>
+  </data>
+  <data name="'Supplier' Cannot be empty !" xml:space="preserve">
+    <value>لا يمكن أن يكون "المورد" فارغًا!</value>
+  </data>
+  <data name="'Supplier' should not empty !" xml:space="preserve">
+    <value>يجب عدم إفراغ "المورد"!</value>
+  </data>
+  <data name="An error occurred. Please check the error log for details." xml:space="preserve">
+    <value>حدث خطأ. يرجى التحقق من سجل الخطأ للحصول على التفاصيل.</value>
+  </data>
+  <data name="Are you sure you want to save this data ???" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حفظ هذه البيانات ؟؟؟</value>
+  </data>
+  <data name="At least 1 product must be input!" xml:space="preserve">
+    <value>يجب إدخال منتج واحد على الأقل!</value>
+  </data>
+  <data name="Backup file storage location Not yet selected !" xml:space="preserve">
+    <value>موقع تخزين ملفات النسخ الاحتياطي لم يتم تحديده بعد!</value>
+  </data>
+  <data name="Check if MS Excel Version 2007 or the latest version is already installed?" xml:space="preserve">
+    <value>تحقق مما إذا كان MS Excel الإصدار 2007 أو أحدث إصدار مثبتًا بالفعل؟</value>
+  </data>
+  <data name="code product" xml:space="preserve">
+    <value>منتج كود</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>تأكيد</value>
+  </data>
+  <data name="Connection to customer display, please try another port." xml:space="preserve">
+    <value>الاتصال بشاشة العميل ، يرجى محاولة منفذ آخر.</value>
+  </data>
+  <data name="Continuing this will log you out and any unsaved changes will be lost. Save your changes before proceeding. Are you sure you want to continue?" xml:space="preserve">
+    <value>سيؤدي استمرار هذا إلى تسجيل خروجك وستفقد أية تغييرات غير محفوظة. احفظ التغييرات قبل المتابعة. هل أنت متأكد أنك تريد الاستمرار؟</value>
+  </data>
+  <data name="Data city/regency origin not found" xml:space="preserve">
+    <value>لم يتم العثور على مدينة البيانات / أصل الوصاية</value>
+  </data>
+  <data name="Data file master {0} is still empty." xml:space="preserve">
+    <value>"ملف البيانات الرئيسي {0} لا يزال فارغًا.</value>
+  </data>
+  <data name="Data invoice already entered" xml:space="preserve">
+    <value>تم إدخال فاتورة البيانات بالفعل</value>
+  </data>
+  <data name="Data invoice sale not found" xml:space="preserve">
+    <value>بيع فاتورة البيانات غير موجود</value>
+  </data>
+  <data name="Data payment already entered" xml:space="preserve">
+    <value>تم إدخال دفع البيانات بالفعل</value>
+  </data>
+  <data name="Data product already entered" xml:space="preserve">
+    <value>تم إدخال منتج البيانات بالفعل</value>
+  </data>
+  <data name="Data product not found" xml:space="preserve">
+    <value>منتج البيانات غير موجود</value>
+  </data>
+  <data name="Data purchase invoice not found" xml:space="preserve">
+    <value>فاتورة شراء البيانات غير موجودة</value>
+  </data>
+  <data name="Data sales Credit not found" xml:space="preserve">
+    <value>رصيد مبيعات البيانات غير موجود</value>
+  </data>
+  <data name="Data supplier not found" xml:space="preserve">
+    <value>لم يتم العثور على مورد البيانات</value>
+  </data>
+  <data name="Data type expense already entered" xml:space="preserve">
+    <value>تم إدخال مصاريف نوع البيانات بالفعل</value>
+  </data>
+  <data name="Data type expense not found" xml:space="preserve">
+    <value>لم يتم العثور على مصاريف نوع البيانات</value>
+  </data>
+  <data name="Do you want the process to continue ?" xml:space="preserve">
+    <value>هل تريد استمرار العملية؟</value>
+  </data>
+  <data name="Do you want the process to continue?" xml:space="preserve">
+    <value>هل تريد استمرار العملية؟</value>
+  </data>
+  <data name="Do you want to cancel the current transaction?" xml:space="preserve">
+    <value>هل تريد إلغاء الصفقة الحالية؟</value>
+  </data>
+  <data name="Do you want to continue the printing process ?" xml:space="preserve">
+    <value>هل تريد متابعة عملية الطباعة؟</value>
+  </data>
+  <data name="Do you want to continue the printing process?" xml:space="preserve">
+    <value>هل تريد متابعة عملية الطباعة؟</value>
+  </data>
+  <data name="Do you want to continue with the database backup process?" xml:space="preserve">
+    <value>هل تريد متابعة عملية النسخ الاحتياطي لقاعدة البيانات؟</value>
+  </data>
+  <data name="Do you want to delete this data?" xml:space="preserve">
+    <value>هل تريد حذف هذه البيانات؟</value>
+  </data>
+  <data name="Employee Not yet selected" xml:space="preserve">
+    <value>الموظف لم يتم اختياره بعد</value>
+  </data>
+  <data name="Excel file location and name not yet selected." xml:space="preserve">
+    <value>موقع ملف Excel واسمه لم يتم تحديدهما بعد.</value>
+  </data>
+  <data name="Failed to delete old database !!!" xml:space="preserve">
+    <value>فشل حذف قاعدة البيانات القديمة !!!</value>
+  </data>
+  <data name="Failed to open master file {0} !!!." xml:space="preserve">
+    <value>فشل فتح الملف الرئيسي {0} !!!.</value>
+  </data>
+  <data name="File backup Not yet selected !" xml:space="preserve">
+    <value>ملف النسخ الاحتياطي لم يتم تحديده بعد!</value>
+  </data>
+  <data name="Incorrect user name or password !!!" xml:space="preserve">
+    <value>اسم المستخدم أو كلمة المرور غير صحيحة !!!</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>معلومة</value>
+  </data>
+  <data name="Invalid Tax ID." xml:space="preserve">
+    <value>معرف الضريبة غير صالح.</value>
+  </data>
+  <data name="It is recommended to install SparkPOS on 'Drive D'." xml:space="preserve">
+    <value>يوصى بتثبيت SparkPOS على "Drive D".</value>
+  </data>
+  <data name="keyMasterExcel" xml:space="preserve">
+    <value>لفتح الملف الرئيسي {0} يتطلب MS Excel الإصدار 2007 أو الأحدث.
+
+هل تريد استمرار العملية؟</value>
+  </data>
+  <data name="KeyValuesPaid" xml:space="preserve">
+    <value>عذرًا ، الملف الرئيسي {0} مفتوح حاليًا. الرجاء إغلاقها أولاً.</value>
+  </data>
+  <data name="Latest update check process has failed." xml:space="preserve">
+    <value>فشلت عملية التحقق من التحديث الأخير.</value>
+  </data>
+  <data name="Lokasi dan name file Excel Not yet selected." xml:space="preserve">
+    <value>Lokasi dan name file Excel Not yet selected.</value>
+  </data>
+  <data name="Minimum 1 category must selected" xml:space="preserve">
+    <value>يجب تحديد فئة واحدة كحد أدنى</value>
+  </data>
+  <data name="Minimum 1 customer must selected" xml:space="preserve">
+    <value>يجب تحديد عميل واحد على الأقل</value>
+  </data>
+  <data name="Minimum 1 employee must selected" xml:space="preserve">
+    <value>يجب اختيار موظف واحد كحد أدنى</value>
+  </data>
+  <data name="Minimum 1 invoice must entered !" xml:space="preserve">
+    <value>يجب إدخال فاتورة واحدة على الأقل!</value>
+  </data>
+  <data name="Minimum 1 item expense must entered !" xml:space="preserve">
+    <value>يجب إدخال مصاريف عنصر واحد على الأقل!</value>
+  </data>
+  <data name="Minimum 1 item product must entered !" xml:space="preserve">
+    <value>يجب إدخال منتج واحد على الأقل!</value>
+  </data>
+  <data name="Minimum 1 product item must be inputted !" xml:space="preserve">
+    <value>يجب إدخال عنصر منتج واحد على الأقل!</value>
+  </data>
+  <data name="Minimum 1 product must entered !" xml:space="preserve">
+    <value>يجب إدخال منتج واحد على الأقل!</value>
+  </data>
+  <data name="Minimum 1 reason must selected" xml:space="preserve">
+    <value>يجب تحديد سبب واحد على الأقل</value>
+  </data>
+  <data name="Minimum 1 supplier must selected" xml:space="preserve">
+    <value>يجب تحديد مورد واحد على الأقل</value>
+  </data>
+  <data name="Minimum 1 type expense must selected" xml:space="preserve">
+    <value>يجب تحديد الحد الأدنى من مصروفات النوع 1</value>
+  </data>
+  <data name="Minimum one name product must selected !" xml:space="preserve">
+    <value>يجب تحديد منتج اسم واحد على الأقل!</value>
+  </data>
+  <data name="Minimum one position label barcode must selected !" xml:space="preserve">
+    <value>يجب تحديد الرمز الشريطي لتسمية الموضع الواحد على الأقل!</value>
+  </data>
+  <data name="Minimum one position label price must selected !" xml:space="preserve">
+    <value>يجب تحديد الحد الأدنى لسعر تسمية المركز الواحد!</value>
+  </data>
+  <data name="MsgDeleteError" xml:space="preserve">
+    <value>عذرا ، فشل حذف البيانات التي أدخلتها! حاول مرة اخرى.
+
+حاول مرة اخرى.</value>
+  </data>
+  <data name="MsgDuplicate" xml:space="preserve">
+    <value>عذرا ، البيانات التي أدخلتها فشلت في الحفظ! حاول مرة اخرى.
+
+تحقق مما إذا كان {0} قد تم استخدامه بالفعل.</value>
+  </data>
+  <data name="MsgUpdateError" xml:space="preserve">
+    <value>عذرا ، البيانات التي أدخلتها فشلت في الحفظ! حاول مرة اخرى.
+
+
+
+حاول مرة اخرى.</value>
+  </data>
+  <data name="Name Customer Not yet entered" xml:space="preserve">
+    <value>لم يتم إدخال اسم العميل بعد</value>
+  </data>
+  <data name="Name product not allowed empty" xml:space="preserve">
+    <value>اسم المنتج غير مسموح به فارغًا</value>
+  </data>
+  <data name="Name supplier Not yet entered" xml:space="preserve">
+    <value>اسم المورد لم يتم إدخاله بعد</value>
+  </data>
+  <data name="Not yet there Information history payment" xml:space="preserve">
+    <value>ليس هناك دفع تاريخ المعلومات</value>
+  </data>
+  <data name="Password and confirmation password must be the same" xml:space="preserve">
+    <value>يجب أن تكون كلمة المرور وكلمة المرور متطابقتين</value>
+  </data>
+  <data name="Pay Cash" xml:space="preserve">
+    <value>ادفع نقدا</value>
+  </data>
+  <data name="Pay via Card" xml:space="preserve">
+    <value>الدفع عن طريق البطاقة</value>
+  </data>
+  <data name="Please fill in first." xml:space="preserve">
+    <value>الرجاء ملء أولا.</value>
+  </data>
+  <data name="Please select a customer" xml:space="preserve">
+    <value>الرجاء تحديد عميل</value>
+  </data>
+  <data name="Please uninstall SparkPOS first, then install it again on 'Drive D'." xml:space="preserve">
+    <value>يرجى إلغاء تثبيت SparkPOS أولاً ، ثم تثبيته مرة أخرى على "Drive D".</value>
+  </data>
+  <data name="Product data not found" xml:space="preserve">
+    <value>لم يتم العثور على بيانات المنتج</value>
+  </data>
+  <data name="Product name cannot be empty" xml:space="preserve">
+    <value>لا يمكن أن يكون اسم المنتج فارغًا</value>
+  </data>
+  <data name="Purchase Credit data not found" xml:space="preserve">
+    <value>لم يتم العثور على بيانات ائتمان الشراء</value>
+  </data>
+  <data name="quantity pay less !" xml:space="preserve">
+    <value>كمية تدفع أقل!</value>
+  </data>
+  <data name="Sorry API king postage Not yet set !!!\nCost shipping check process cannot be continued." xml:space="preserve">
+    <value>عذراً لم يتم تعيين طابع الملك API الخاص بالبريد !!! \ n لا يمكن متابعة عملية التحقق من تكلفة الشحن.</value>
+  </data>
+  <data name="Sorry connection to database failed !!!" xml:space="preserve">
+    <value>عذرا فشل الاتصال بقاعدة البيانات !!!</value>
+  </data>
+  <data name="Sorry data 'Category' has not been selected yet." xml:space="preserve">
+    <value>عذرا البيانات "الفئة" لم يتم تحديدها بعد.</value>
+  </data>
+  <data name="Sorry data 'Category' Not yet selected." xml:space="preserve">
+    <value>عذرا البيانات "الفئة" لم يتم تحديدها بعد.</value>
+  </data>
+  <data name="Sorry data failed to delete !" xml:space="preserve">
+    <value>عذرا فشل حذف البيانات!</value>
+  </data>
+  <data name="Sorry Dept Payment Purchase cash can not be deleted" xml:space="preserve">
+    <value>عذرا دفع قسم الدفع نقدا الشراء لا يمكن حذفها</value>
+  </data>
+  <data name="Sorry file master Category not found." xml:space="preserve">
+    <value>عذرا ملف سيد الفئة غير موجود.</value>
+  </data>
+  <data name="Sorry file master Dropshipper not found." xml:space="preserve">
+    <value>عذرا ملف سيد دروبشيبر غير موجود.</value>
+  </data>
+  <data name="Sorry file master Product not found." xml:space="preserve">
+    <value>عذرا ملف سيد المنتج غير موجود.</value>
+  </data>
+  <data name="Sorry file master Supplier not found." xml:space="preserve">
+    <value>عذرا ملف سيد المورد غير موجود.</value>
+  </data>
+  <data name="Sorry file master Tax not found." xml:space="preserve">
+    <value>عذرا ملف سيد الضريبة غير موجود.</value>
+  </data>
+  <data name="Sorry payment credit sales cash can not be deleted" xml:space="preserve">
+    <value>عذرا لا يمكن حذف الدفع النقدي للمبيعات الائتمانية</value>
+  </data>
+  <data name="Sorry quantity pay less" xml:space="preserve">
+    <value>آسف كمية تدفع أقل</value>
+  </data>
+  <data name="Sorry report data card stock not found" xml:space="preserve">
+    <value>عذرا تقرير بطاقة البيانات الأسهم غير موجود</value>
+  </data>
+  <data name="Sorry report data Credit Card sales not found" xml:space="preserve">
+    <value>عذرا تقرير مبيعات بطاقة الائتمان البيانات غير موجود</value>
+  </data>
+  <data name="Sorry report data credit sales not found" xml:space="preserve">
+    <value>عذرا تقرير مبيعات بيانات الائتمان غير موجود</value>
+  </data>
+  <data name="Sorry report data customer product not found" xml:space="preserve">
+    <value>عذرا تقرير بيانات العميل المنتج غير موجود</value>
+  </data>
+  <data name="Sorry report data Dept Payment Purchase not found" xml:space="preserve">
+    <value>عذرا ، تقرير بيانات قسم الدفع شراء غير موجود</value>
+  </data>
+  <data name="Sorry report data expense cost not found" xml:space="preserve">
+    <value>عذرا ، تقرير حساب بيانات التكلفة غير موجود</value>
+  </data>
+  <data name="Sorry report data Income and Expense not found&quot;" xml:space="preserve">
+    <value>عفواً ، لم يتم العثور على بيانات تقرير الدخل والمصروفات "</value>
+  </data>
+  <data name="Sorry report data loan not found" xml:space="preserve">
+    <value>عذرا تقرير بيانات القرض غير موجود</value>
+  </data>
+  <data name="Sorry report data loss profit not found" xml:space="preserve">
+    <value>عذرا تقرير فقدان البيانات الربح غير موجود</value>
+  </data>
+  <data name="Sorry report data payment credit sales not found" xml:space="preserve">
+    <value>عذرا تقرير مبيعات الائتمان دفع البيانات غير موجود</value>
+  </data>
+  <data name="Sorry report data return sales not found" xml:space="preserve">
+    <value>عذرا تقرير مبيعات عودة البيانات غير موجود</value>
+  </data>
+  <data name="Sorry report data salary employee not found" xml:space="preserve">
+    <value>عذرا تقرير الموظف بيانات الراتب غير موجود</value>
+  </data>
+  <data name="Sorry report data sales not found" xml:space="preserve">
+    <value>عذرا تقرير مبيعات البيانات غير موجود</value>
+  </data>
+  <data name="Sorry report data sales per Cashier not found" xml:space="preserve">
+    <value>عذرا تقرير مبيعات البيانات لكل كاشير غير موجود</value>
+  </data>
+  <data name="Sorry report data sales product favorit not found" xml:space="preserve">
+    <value>عذرا تقرير بيانات مبيعات المنتج المفضل غير موجود</value>
+  </data>
+  <data name="Sorry report data stock product not found" xml:space="preserve">
+    <value>عذرا تقرير بيانات المخزون المنتج غير موجود</value>
+  </data>
+  <data name="Sorry report dataStock Adjustment not found" xml:space="preserve">
+    <value>بيانات تقرير آسف لم يتم العثور على تعديل المخزون</value>
+  </data>
+  <data name="Sorry Right Access 'Administrator' can not be deleted" xml:space="preserve">
+    <value>آسف حق الوصول "المسؤول" لا يمكن حذفه</value>
+  </data>
+  <data name="Sorry Right Access 'Administrator' cannot be edited" xml:space="preserve">
+    <value>آسف حق الوصول "المسؤول" لا يمكن تحريرها</value>
+  </data>
+  <data name="Sorry the data you found was not found" xml:space="preserve">
+    <value>آسف لم يتم العثور على البيانات التي وجدت</value>
+  </data>
+  <data name="Sorry, Purchase data report was not found" xml:space="preserve">
+    <value>عذرا ، لم يتم العثور على تقرير بيانات الشراء</value>
+  </data>
+  <data name="Sorry, quantity payment exceeds  remaining credit" xml:space="preserve">
+    <value>عذرا ، المبلغ المدفوع يتجاوز الرصيد المتبقي</value>
+  </data>
+  <data name="Sorry, quantity payment exceeds  remaining debt" xml:space="preserve">
+    <value>عذرا ، دفع الكمية يتجاوز الديون المتبقية</value>
+  </data>
+  <data name="Sorry, quantity return should not exceeds  quantity sale" xml:space="preserve">
+    <value>عذرًا ، يجب ألا يتجاوز إرجاع الكمية بيع الكمية</value>
+  </data>
+  <data name="Sorry, the Customer master file was not found." xml:space="preserve">
+    <value>عذرًا ، لم يتم العثور على ملف العميل الرئيسي.</value>
+  </data>
+  <data name="Sorry, the data card debt purchase report was not found" xml:space="preserve">
+    <value>عذرًا ، لم يتم العثور على تقرير شراء ديون بطاقة البيانات</value>
+  </data>
+  <data name="Sorry, the data entry is incomplete!" xml:space="preserve">
+    <value>عذرا ، إدخال البيانات غير مكتمل!</value>
+  </data>
+  <data name="Sorry, the data you entered failed to save! Please try again." xml:space="preserve">
+    <value>عذرا ، البيانات التي أدخلتها فشلت في الحفظ! حاول مرة اخرى.</value>
+  </data>
+  <data name="Sorry, the date range is wrong !!!" xml:space="preserve">
+    <value>عذرا ، النطاق الزمني خاطئ !!!</value>
+  </data>
+  <data name="Sorry, the master file format {0} is invalid, the import process cannot continue." xml:space="preserve">
+    <value>عذرًا ، تنسيق الملف الرئيسي {0} غير صالح ، لا يمكن متابعة عملية الاستيراد." </value>
+  </data>
+  <data name="Sorry, the Online Update link/URL has not been set yet!!!" xml:space="preserve">
+    <value>عذرًا ، لم يتم تعيين رابط / عنوان URL الخاص بالتحديث عبر الإنترنت حتى الآن !!!</value>
+  </data>
+  <data name="Sorry, the Online Update link/URL has not been set yet!!!\nLatest update check process has failed." xml:space="preserve">
+    <value>عذرًا ، لم يتم تعيين رابط / URL التحديث عبر الإنترنت حتى الآن !!! \ n فشلت عملية التحقق من التحديث الأخير.</value>
+  </data>
+  <data name="Sorry, the quantity returned cannot exceed the quantity sold" xml:space="preserve">
+    <value>عذرًا ، لا يمكن أن تتجاوز الكمية المعادة الكمية المباعة</value>
+  </data>
+  <data name="Sorry, you do not have the authority to access this menu" xml:space="preserve">
+    <value>عذرًا ، ليس لديك الصلاحية للوصول إلى هذه القائمة</value>
+  </data>
+  <data name="The database restore process failed." xml:space="preserve">
+    <value>فشلت عملية استعادة قاعدة البيانات.</value>
+  </data>
+  <data name="The page is currently unavailable:" xml:space="preserve">
+    <value>الصفحة غير متوفرة حاليا:</value>
+  </data>
+  <data name="This data is already being used for another process." xml:space="preserve">
+    <value>يتم استخدام هذه البيانات بالفعل في عملية أخرى.</value>
+  </data>
+  <data name="To open the {0} master file requires MS Excel Version 2007 or the latest." xml:space="preserve">
+    <value>لفتح الملف الرئيسي {0} يتطلب MS Excel الإصدار 2007 أو الأحدث.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>تحذير</value>
+  </data>
+  <data name="You have not completed the input of product data !" xml:space="preserve">
+    <value>لم تكمل إدخال بيانات المنتج!</value>
+  </data>
+  <data name="You have not completed the payment data input !" xml:space="preserve">
+    <value>لم تكمل إدخال بيانات الدفع!</value>
+  </data>
+  <data name="You haven't completed the product data input yet!" xml:space="preserve">
+    <value>لم تكمل إدخال بيانات المنتج حتى الآن!</value>
+  </data>
+  <data name="Your trial has expired. Please purchase a license to continue using the application." xml:space="preserve">
+    <value>انتهت الفترة التجريبية الخاصة بك. يرجى شراء ترخيص لمواصلة استخدام التطبيق.</value>
+  </data>
+</root>
