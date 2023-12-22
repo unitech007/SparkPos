@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GodSharp.SerialPort</name>
+    </assembly>
+    <members>
+        <member name="T:GodSharp.Extension.ByteExtension">
+            <summary>
+            Byte extension methods class.
+            </summary>
+        </member>
+        <member name="M:GodSharp.Extension.ByteExtension.ToHexString(System.Byte[],System.String)">
+            <summary>
+            Bytes to hexadecimal.
+            </summary>
+            <param name="bytes">The byte array.</param>
+            <param name="separator">The separator,default is space</param>
+            <returns>String of hex.</returns>
+        </member>
+        <member name="T:GodSharp.Extension.StringExtension">
+            <summary>
+            String extension methods class.
+            </summary>
+        </member>
+        <member name="M:GodSharp.Extension.StringExtension.HexToByte(System.String)">
+            <summary>
+            Hexadecimal string to an byte array.
+            </summary>
+            <param name="hex">The hex string.</param>
+            <returns>An byte array.</returns>
+        </member>
+        <member name="T:GodSharp.SerialPortDataFormat">
+            <summary>
+            serialport data format
+            </summary>
+        </member>
+        <member name="F:GodSharp.SerialPortDataFormat.Char">
+            <summary>
+            Normal string
+            </summary>
+        </member>
+        <member name="F:GodSharp.SerialPortDataFormat.Hex">
+            <summary>
+            Hex string
+            </summary>
+        </member>
+        <member name="T:GodSharp.GodSerialPort">
+            <summary>
+            GodSerialPort Util Class.
+            </summary>
+            <example>
+            GodSerialPort serial= new GodSerialPort("COM1",9600);
+            serial.UseDataReceived((sp,bytes)=>{});
+            serial.Open();
+            </example>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.BaudRateDictionary">
+            <summary>
+            Gets the baudrate dictionary.
+            </summary>
+            <value>The baudrate dictionary.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.ParityDictionary">
+            <summary>
+            Gets the parity dictionary.
+            </summary>
+            <value>The parity dictionary.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.StopBitDictionary">
+            <summary>
+            Gets the stop bit dictionary.
+            </summary>
+            <value>The stop bit dictionary.</value>
+        </member>
+        <member name="F:GodSharp.GodSerialPort.onData">
+            <summary>
+            The method of execution that data has been received through a port represented by the SerialPort object.
+            </summary>
+        </member>
+        <member name="F:GodSharp.GodSerialPort.onError">
+            <summary>
+            The method of execution that an error has occurred with a port represented by a SerialPort object.
+            </summary>
+        </member>
+        <member name="F:GodSharp.GodSerialPort.onPinChange">
+            <summary>
+            The method of execution that a non-data signal event has occurred on the port represented by the SerialPort object.
+            </summary>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.DataFormat">
+            <summary>
+            Gets or sets the data format.
+            </summary>
+            <value>The data format.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.TryCountOfReceive">
+            <summary>
+            Gets or sets the try count of receive.
+            </summary>
+            <value>The try count of receive,default is 10.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.TrySleepTimeOfReceive">
+            <summary>
+            Gets or sets the try sleep time of receive,unit is ms.
+            </summary>
+            <value>The try sleep time of receive,default is 10.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.EndCharOfHex">
+            <summary>
+            Gets or sets the end character.
+            </summary>
+            <value>The end character.</value>
+        </member>
+        <member name="F:GodSharp.GodSerialPort.serialPort">
+            <summary>
+            The serial port
+            </summary>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.SerialPort">
+            <summary>
+            SerialPort对象
+            </summary>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.IsOpen">
+            <summary>
+            Determines whether this instance is open.
+            </summary>
+            <returns><c>true</c> if this serialport is open; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.PortName">
+            <summary>
+            Gets or sets the name of the port.
+            </summary>
+            <value>The name of the port.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.BaudRate">
+            <summary>
+            Gets or sets the baudrate.
+            </summary>
+            <value>The baudrate.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.BreakState">
+            <summary>
+            Gets or sets a value indicating whether [break state].
+            </summary>
+            <value><c>true</c> if [break state]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.DataBits">
+            <summary>
+            Gets or sets the databits.
+            </summary>
+            <value>The databits.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.Encoding">
+            <summary>
+            Gets or sets the encoding.
+            </summary>
+            <value>The encoding.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.Handshake">
+            <summary>
+            Gets or sets the handshake.
+            </summary>
+            <value>The handshake.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.Parity">
+            <summary>
+            Gets or sets the parity.
+            </summary>
+            <value>The parity.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.StopBits">
+            <summary>
+            Gets or sets the stopbits.
+            </summary>
+            <value>The stopbits.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.ReadTimeout">
+            <summary>
+            Gets or sets the read timeout.
+            </summary>
+            <value>The read timeout.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.WriteTimeout">
+            <summary>
+            Gets or sets the write timeout.
+            </summary>
+            <value>The write timeout.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.DtrEnable">
+            <summary>
+            Gets or sets a value indicating whether [DTR enable].
+            </summary>
+            <value><c>true</c> if [DTR enable]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.RtsEnable">
+            <summary>
+            Gets or sets a value indicating whether [RTS enable].
+            </summary>
+            <value><c>true</c> if [RTS enable]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.CtsHolding">
+            <summary>
+            Gets a value indicating whether [CTS holding].
+            </summary>
+            <value><c>true</c> if [CTS holding]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.DsrHolding">
+            <summary>
+            Gets a value indicating whether [DSR holding].
+            </summary>
+            <value><c>true</c> if [DSR holding]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.CdHolding">
+            <summary>
+            Gets a value indicating whether [cd holding].
+            </summary>
+            <value><c>true</c> if [cd holding]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.DiscardNull">
+            <summary>
+            Gets or sets a value indicating whether [discard null].
+            </summary>
+            <value><c>true</c> if [discard null]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.ReadBufferSize">
+            <summary>
+            Gets or sets the size of the read buffer.
+            </summary>
+            <value>The size of the read buffer.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.ParityReplace">
+            <summary>
+            Gets or sets the parity replace.
+            </summary>
+            <value>The parity replace.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.ReceivedBytesThreshold">
+            <summary>
+            Gets or sets the received bytes threshold.
+            </summary>
+            <value>The received bytes threshold.</value>
+        </member>
+        <member name="P:GodSharp.GodSerialPort.WriteBufferSize">
+            <summary>
+            Gets or sets the size of the write buffer.
+            </summary>
+            <value>The size of the write buffer.</value>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+            <param name="parity">The string parity,default is none,Parity.None.
+            <para>Parity.None：0|n|none</para>
+            <para>Parity.Odd：1|o|odd</para>
+            <para>Parity.Even：2|e|even</para>
+            <para>Parity.Mark：3|m|mark</para>
+            <para>Parity.Space：4|s|space</para>
+            </param>
+            <param name="stopBits">The string stopbits,default is one,StopBits.One.
+            <para>StopBits.None：0|n|none</para>
+            <para>StopBits.One：1|o|one</para>
+            <para>StopBits.Two：2|t|two</para>
+            <para>StopBits.OnePointFive：3|1.5|f|of|opf</para>
+            </param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+            <param name="parity">The int parity,default is 0,Parity.None.
+            <para>Parity.None：0</para>
+            <para>Parity.Odd：1</para>
+            <para>Parity.Even：2</para>
+            <para>Parity.Mark：3</para>
+            <para>Parity.Space：4</para>
+            </param>
+            <param name="stopBits">The int stopbits,default is 1,StopBits.One.
+            <para>StopBits.None：0</para>
+            <para>StopBits.One：1</para>
+            <para>StopBits.Two：2</para>
+            <para>StopBits.OnePointFive：3</para>
+            </param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="parity">The int parity,default is Parity.None.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+            <param name="stopBits">The int stopbits,default is StopBits.One.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+            <param name="parity">The string parity,default is none,Parity.None.
+            <para>Parity.None：0|n|none</para>
+            <para>Parity.Odd：1|o|odd</para>
+            <para>Parity.Even：2|e|even</para>
+            <para>Parity.Mark：3|m|mark</para>
+            <para>Parity.Space：4|s|space</para>
+            </param>
+            <param name="stopBits">The string stopbits,default is one,StopBits.One.
+            <para>StopBits.None：0|n|none</para>
+            <para>StopBits.One：1|o|one</para>
+            <para>StopBits.Two：2|t|two</para>
+            <para>StopBits.OnePointFive：3|1.5|f|of|opf</para>
+            </param>
+            <param name="handshake">The string handshake,default is none,Handshake.None.
+            <para>Handshake.None：0|n|none</para>
+            <para>Handshake.XOnXOff：1|x|xoxo</para>
+            <para>Handshake.RequestToSend：2|r|rst</para>
+            <para>Handshake.RequestToSendXOnXOff：3|rx|rtsxx</para>
+            </param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+            <param name="parity">The int parity,default is 0,Parity.None.
+            <para>Parity.None：0</para>
+            <para>Parity.Odd：1</para>
+            <para>Parity.Even：2</para>
+            <para>Parity.Mark：3</para>
+            <para>Parity.Space：4</para>
+            </param>
+            <param name="stopBits">The int stopbits,default is 1,StopBits.One.
+            <para>StopBits.None：0</para>
+            <para>StopBits.One：1</para>
+            <para>StopBits.Two：2</para>
+            <para>StopBits.OnePointFive：3</para>
+            </param>
+            <param name="handshake">The int handshake,default is 0,Handshake.None.
+            <para>Handshake.None：0</para>
+            <para>Handshake.XOnXOff：1</para>
+            <para>Handshake.RequestToSend：2</para>
+            <para>Handshake.RequestToSendXOnXOff：3</para>
+            </param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.#ctor(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits,System.IO.Ports.Handshake)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GodSharp.GodSerialPort"/> class.
+            </summary>
+            <param name="portName">The name of the port.</param>
+            <param name="baudRate">The baudrate,default is 9600.</param>
+            <param name="parity">The int parity,default is Parity.None.</param>
+            <param name="dataBits">The databits,default is 8.</param>
+            <param name="stopBits">The int stopbits,default is StopBits.One.</param>
+            <param name="handshake">The int handshake,default is Handshake.None.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.SerialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            Handles the DataReceived event of the SerialPort.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.IO.Ports.SerialDataReceivedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.SerialPort_ErrorReceived(System.Object,System.IO.Ports.SerialErrorReceivedEventArgs)">
+            <summary>
+            Handles the ErrorReceived event of the SerialPort.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.IO.Ports.SerialErrorReceivedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.SerialPort_PinChanged(System.Object,System.IO.Ports.SerialPinChangedEventArgs)">
+            <summary>
+            Handles the PinChanged event of the SerialPort.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.IO.Ports.SerialPinChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.UseDataReceived(System.Action{GodSharp.GodSerialPort,System.Byte[]})">
+            <summary>
+            Use DataReceived event with data received action.
+            </summary>
+            <param name="action">The action which process data.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Init">
+            <summary>
+            Initializes the <see cref="P:GodSharp.GodSerialPort.SerialPort"/> with the action of data receive.
+            </summary>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Open">
+            <summary>
+            Open the <see cref="P:GodSharp.GodSerialPort.SerialPort"/>.
+            </summary>
+            <returns><c>true</c> if opend, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.OnError(System.Action{GodSharp.GodSerialPort,System.IO.Ports.SerialError})">
+            <summary>
+            Set the method when [error].
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.OnPinChange(System.Action{GodSharp.GodSerialPort,System.IO.Ports.SerialPinChange})">
+            <summary>
+            Set the method when [pin changed].
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Close">
+            <summary>
+            Close the <see cref="P:GodSharp.GodSerialPort.SerialPort"/>.
+            </summary>
+            <returns><c>true</c> if closed, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.ReadString">
+            <summary>
+            Reads data from the input buffer.
+            </summary>
+            <returns>System.String,hex or ascii format.</returns>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Read">
+            <summary>
+            Reads data from the input buffer.
+            </summary>
+            <returns>The byte array.</returns>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.TryRead">
+            <summary>
+            Try Read Data
+            </summary>
+            <returns>The byte array.</returns>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.WriteHexString(System.String)">
+            <summary>
+            Writes the specified hex string.
+            </summary>
+            <param name="str">The hex string.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.WriteAsciiString(System.String)">
+            <summary>
+            Writes the specified ascii string.
+            </summary>
+            <param name="str">The ascii string.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Write(System.String)">
+            <summary>
+            Writes the specified string.
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Write(System.Byte[])">
+            <summary>
+            Writes the byte array.
+            </summary>
+            <param name="bytes">The byte array.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes the byte array with offset.
+            </summary>
+            <param name="bytes">The byte array.</param>
+            <param name="offset">The number of offset.</param>
+            <param name="count">The length of write.</param>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.DiscardInBuffer">
+            <summary>
+            Discards the input buffer.
+            </summary>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.DiscardOutBuffer">
+            <summary>
+            Discards the output buffer.
+            </summary>
+        </member>
+        <member name="M:GodSharp.GodSerialPort.GetPortNames">
+            <summary>
+            Get an array of serialport name for current computer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GodSharp.Util.PortUtil">
+            <summary>
+            SerialPort util.
+            </summary>
+        </member>
+        <member name="M:GodSharp.Util.PortUtil.GetParity(System.String)">
+            <summary>
+            Gets the parity by string.
+            </summary>
+            <param name="parityVal">The string parity value.
+            <para>Parity.None：0|n|none</para>
+            <para>Parity.Odd：1|o|odd</para>
+            <para>Parity.Even：2|e|even</para>
+            <para>Parity.Mark：3|m|mark</para>
+            <para>Parity.Space：4|s|space</para>
+            </param>
+            <returns>The <see cref="T:System.IO.Ports.Parity"/>.</returns>
+        </member>
+        <member name="M:GodSharp.Util.PortUtil.GetParity(System.Int32)">
+            <summary>
+            Gets the parity by int.
+            </summary>
+            <param name="parityVal">The int parity value.
+            <para>Parity.None：0</para>
+            <para>Parity.Odd：1</para>
+            <para>Parity.Even：2</para>
+            <para>Parity.Mark：3</para>
+            <para>Parity.Space：4</para>
+            </param>
+            <returns>The <see cref="T:System.IO.Ports.Parity"/>.</returns>
+        </member>
+        <member name="M:GodSharp.Util.PortUtil.GetStopBits(System.String)">
+            <summary>
+            Gets the stopbits by string.
+            </summary>
+            <param name="stopBitsVal">The string stop bits.
+            <para>StopBits.None：0|n|none</para>
+            <para>StopBits.One：1|o|one</para>
+            <para>StopBits.Two：2|t|two</para>
+            <para>StopBits.OnePointFive：3|1.5|f|of|opf</para>
+            </param>
+            <returns>The <see cref="T:System.IO.Ports.StopBits"/>.</returns>
+        </member>
+        <member name="M:GodSharp.Util.PortUtil.GetStopBits(System.Int32)">
+            <summary>
+            Gets the stopbits by int.
+            </summary>
+            <param name="stopBitsVal">The int stop bits.
+            <para>StopBits.None：0</para>
+            <para>StopBits.One：1</para>
+            <para>StopBits.Two：2</para>
+            <para>StopBits.OnePointFive：3</para>
+            </param>
+            <returns>The <see cref="T:System.IO.Ports.StopBits"/>.</returns>
+        </member>
+        <member name="M:GodSharp.Util.PortUtil.GetHandshake(System.String)">
+            <summary>
+            Gets the handshake by string.
+            </summary>
+            <param name="shake">The string handshake value.
+            <para>Handshake.None：0|n|none</para>
+            <para>Handshake.XOnXOff：1|x|xoxo</para>
+            <para>Handshake.RequestToSend：2|r|rst</para>
+            <para>Handshake.RequestToSendXOnXOff：3|rx|rtsxx</para>
+            </param>
+            <returns>Handshake.</returns>
+        </member>
+        <member name="M:GodSharp.Util.PortUtil.GetHandshake(System.Int32)">
+            <summary>
+            Gets the handshake by string.
+            </summary>
+            <param name="shake">The int handshake value.
+            <para>Handshake.None：0</para>
+            <para>Handshake.XOnXOff：1</para>
+            <para>Handshake.RequestToSend：2</para>
+            <para>Handshake.RequestToSendXOnXOff：3</para>
+            </param>
+            <returns>Handshake.</returns>
+        </member>
+    </members>
+</doc>
