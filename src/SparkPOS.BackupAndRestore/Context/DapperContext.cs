@@ -23,6 +23,7 @@ using System.Text;
 using System.Data;
 using System.Configuration;
 using System.Data.Common;
+using SparkPOS.Helper;
 
 namespace SparkPOS.BackupAndRestore.Context
 {
@@ -86,8 +87,11 @@ namespace SparkPOS.BackupAndRestore.Context
                     isConnected = conn.State == ConnectionState.Open;
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                MainProgram.LogException(ex);
+                // var msg = "something wrong check error log";
+                // MsgHelper.MsgWarning(msg);
             }
 
             return isConnected;
@@ -104,8 +108,11 @@ namespace SparkPOS.BackupAndRestore.Context
                 conn.ConnectionString = connectionString;
                 conn.Open();
             }
-            catch
+            catch(Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
             }
 
             return conn;

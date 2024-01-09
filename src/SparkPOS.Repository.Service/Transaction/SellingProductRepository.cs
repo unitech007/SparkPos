@@ -166,8 +166,9 @@ namespace SparkPOS.Repository.Service
                     item.Product.list_of_harga_grosir = GetListPriceWholesale(item.product_id).ToList();
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                DapperContext.LogException(ex);
             }
 
             return oList;
@@ -188,7 +189,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return obj;
@@ -264,7 +265,7 @@ namespace SparkPOS.Repository.Service
             catch (Exception ex)
             {
                 // Log or handle the exception as needed
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                DapperContext.LogException(ex);
                 return null;
             }
         }
@@ -283,7 +284,7 @@ namespace SparkPOS.Repository.Service
             catch (Exception ex)
             {
                 // Log or handle the exception as needed
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                DapperContext.LogException(ex);
             }
 
             return taxRate;
@@ -304,7 +305,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return obj;
@@ -326,7 +327,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -359,7 +360,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -379,7 +380,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -402,7 +403,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -470,7 +471,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return result;
@@ -627,7 +628,7 @@ namespace SparkPOS.Repository.Service
             catch (Exception ex)
             {
                 result = 0;
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return result;
@@ -649,7 +650,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return result;
@@ -690,7 +691,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -725,7 +726,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -753,7 +754,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -774,7 +775,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -794,7 +795,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -821,7 +822,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -846,7 +847,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -866,7 +867,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;

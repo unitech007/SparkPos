@@ -28,6 +28,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Collections.Generic;
 using System.Linq;
 using Npgsql;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SparkPOS.Repository.Service
 {    
@@ -39,7 +40,7 @@ namespace SparkPOS.Repository.Service
 
         private readonly string _providerName;
         private readonly string _connectionString;
-      //  private const int TrialDurationDays = 15;
+        //  private const int TrialDurationDays = 15;
         //public DapperContext()
         //{
         //    var server = ConfigurationManager.AppSettings["server"];
@@ -57,6 +58,43 @@ namespace SparkPOS.Repository.Service
         //        _db = GetOpenConnection(_providerName, _connectionString);
         //    }
         //}
+
+        public static void LogException(Exception ex)
+        {
+            string logFileName = "SparkPOS_Error_log.txt";
+            string logFilePath = Path.Combine(
+                System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                logFileName
+            );
+
+            // Check if the file exists
+            if (!File.Exists(logFilePath))
+            {
+                // Create the file if it doesn't exist
+                using (StreamWriter createFile = File.CreateText(logFilePath))
+                {
+                    createFile.Close();
+                }
+            }
+
+
+
+            // Append exception information to the file
+            using (StreamWriter writer = File.AppendText(logFilePath))
+            {
+                //writer.WriteLine("MachineName: " + Environment.MachineName);
+                //writer.WriteLine("Exception Message: " + ex.Message);
+                //writer.WriteLine("Stack Trace: " + ex.StackTrace);
+                //if (ex.InnerException != null)
+                //{
+                //    writer.WriteLine("Inner Exception: " + ex.InnerException);
+                //}
+                writer.WriteLine("Timestamp: " + DateTime.Now.ToString());
+                writer.WriteLine("Exception Message: " + ex.ToString());
+                writer.WriteLine("-----------------------------------------------");
+            }
+        }
+
 
         public DapperContext()
         {
@@ -108,6 +146,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
+                DapperContext.LogException(ex);
                 // Error handling and logging
               //  LogError(ex, "IsOpenConnection");
             }
@@ -129,36 +168,67 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+               
+                 DapperContext.LogException(ex);
             }
 
             return result;
         }
 
+        //private IDbConnection GetOpenConnection(string providerName, string connectionString)
+        //{
+        //    DbConnection conn = null;
+
+        //    try
+        //    {
+        //        DbProviderFactory provider = DbProviderFactories.GetFactory(providerName);
+        //        conn = provider.CreateConnection();
+        //        conn.ConnectionString = connectionString;
+        //        conn.Open();
+        //        // LogError(ex, "IsOpenConnection");
+        // //       string logFilePath = Path.Combine(
+        // //    Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+        // //    "OPENCONNECTION" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".log"
+        // //);
+
+        // //       File.WriteAllText(logFilePath, "Connection String: " + connectionString);
+
+        //        //
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Error handling and logging
+        //        //LogError(ex, "IsOpenConnection");
+        //    }
+
+        //    return conn;
+        //}
+
         private IDbConnection GetOpenConnection(string providerName, string connectionString)
         {
-            DbConnection conn = null;
+          //  connectionString = "Server=localhost;Port=5432;User Id=postgres;Password=Poiu1234##;Database=sparkposdb;ApplicationName=SparkPOSApp;";
+
+            IDbConnection conn = null;
 
             try
             {
                 DbProviderFactory provider = DbProviderFactories.GetFactory(providerName);
                 conn = provider.CreateConnection();
+
+                if (conn is NpgsqlConnection npgsqlConn)
+                {
+                    // Npgsql connection-specific settings
+                    // If your password contains special characters, you may need to escape them in the connection string
+                }
+
                 conn.ConnectionString = connectionString;
                 conn.Open();
-                // LogError(ex, "IsOpenConnection");
-         //       string logFilePath = Path.Combine(
-         //    Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
-         //    "OPENCONNECTION" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".log"
-         //);
-
-         //       File.WriteAllText(logFilePath, "Connection String: " + connectionString);
-
-                //
             }
             catch (Exception ex)
             {
-                // Error handling and logging
-                //LogError(ex, "IsOpenConnection");
+                DapperContext.LogException(ex);
+                // Handle the exception (e.g., log the error)
+                // LogError(ex, "IsOpenConnection");
             }
 
             return conn;
@@ -266,7 +336,9 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+               
+                 DapperContext.LogException(ex); 
+               
             }
 
             return result;
@@ -306,7 +378,8 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+               
+                 DapperContext.LogException(ex);
             }
 
             return result;
@@ -323,7 +396,8 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+               
+                 DapperContext.LogException(ex);
             }
 
             return pagesCount;

@@ -539,8 +539,8 @@
   <data name="Destination City/Regency Data" xml:space="preserve">
     <value>مدينة الوجهة / بيانات ريجنسي</value>
   </data>
-  <data name="dicount" xml:space="preserve">
-    <value>تخفيض</value>
+  <data name="Discount (%)" xml:space="preserve">
+    <value>(%) تخفيض   </value>
   </data>
   <data name="discount" xml:space="preserve">
     <value>تخفيض</value>
@@ -950,7 +950,7 @@
   <data name="January" xml:space="preserve">
     <value>يناير</value>
   </data>
-  <data name="Job_Titles" xml:space="preserve">
+  <data name="Job Titles" xml:space="preserve">
     <value>لمسميات الوظيفية</value>
   </data>
   <data name="July" xml:space="preserve">
@@ -1240,7 +1240,7 @@
   <data name="position Label Barcode" xml:space="preserve">
     <value>باركود تسمية الموقف</value>
   </data>
-  <data name="position Label Price Product" xml:space="preserve">
+  <data name="Position Label Price Product" xml:space="preserve">
     <value>سعر تسمية الموضع المنتج</value>
   </data>
   <data name="position Label Product" xml:space="preserve">
@@ -1270,7 +1270,7 @@
   <data name="Preview Quotation" xml:space="preserve">
     <value>معاينة الاقتباس</value>
   </data>
-  <data name="price" xml:space="preserve">
+  <data name="Price" xml:space="preserve">
     <value>سعر</value>
   </data>
   <data name="price Retail" xml:space="preserve">
@@ -1423,7 +1423,7 @@
   <data name="Purchase Product" xml:space="preserve">
     <value>المنتج شراء</value>
   </data>
-  <data name="quantity" xml:space="preserve">
+  <data name="Quantity" xml:space="preserve">
     <value>كمية</value>
   </data>
   <data name="quantity Minimum" xml:space="preserve">
@@ -1918,7 +1918,7 @@
   <data name="Tambah Data" xml:space="preserve">
     <value>إضافة البيانات</value>
   </data>
-  <data name="tax" xml:space="preserve">
+  <data name="Tax" xml:space="preserve">
     <value>ضريبة</value>
   </data>
   <data name="Tax (%)" xml:space="preserve">

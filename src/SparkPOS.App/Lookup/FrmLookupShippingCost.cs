@@ -229,9 +229,14 @@ namespace SparkPOS.App.Lookup
                         }
                     }
                 }
-                catch
-                {
-                }
+                catch (Exception ex)
+            {
+                MainProgram.LogException(ex);
+                // Error handling and logging
+                var msg =  MainProgram.GlobalWarningMessage();
+                MsgHelper.MsgWarning(msg);
+                //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
+            }
             }
             
             GridListControlHelper.Refresh<costs>(this.gridList, _listOfCost);

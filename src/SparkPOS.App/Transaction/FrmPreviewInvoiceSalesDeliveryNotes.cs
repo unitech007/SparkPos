@@ -400,6 +400,7 @@ namespace SparkPOS.App.Transaction
             }
             catch (Exception ex)
             {
+                MainProgram.LogException(ex);
                 MsgHelper.MsgError(ex.ToString());
 
             }

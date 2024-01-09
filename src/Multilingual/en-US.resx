@@ -506,11 +506,11 @@ Do you want the process to continue?</value>
   <data name="Destination City/Regency Data" xml:space="preserve">
     <value>Destination City/Regency Data</value>
   </data>
-  <data name="dicount" xml:space="preserve">
-    <value>dicount</value>
-  </data>
   <data name="discount" xml:space="preserve">
-    <value>discount</value>
+    <value>Discount (%)</value>
+  </data>
+  <data name="Discount (%)" xml:space="preserve">
+    <value>Discount (%)</value>
   </data>
   <data name="discount (RP)" xml:space="preserve">
     <value>discount (RP)</value>
@@ -971,8 +971,8 @@ Do you want the process to continue?</value>
   <data name="jj" xml:space="preserve">
     <value>.Shorten the notation for shipping cost. For example, 7,000 -&gt; 7, 14,000 -&gt; 14, etc.</value>
   </data>
-  <data name="Job_Titles" xml:space="preserve">
-    <value>Job_Titles</value>
+  <data name="job_titles" xml:space="preserve">
+    <value>Job Titles</value>
   </data>
   <data name="July" xml:space="preserve">
     <value>July</value>
@@ -1263,7 +1263,7 @@ Do you want the process to continue?</value>
     <value>position Label Barcode</value>
   </data>
   <data name="position Label price Product" xml:space="preserve">
-    <value>Position Label price Product</value>
+    <value>Position Label Price Product</value>
   </data>
   <data name="position Label Product" xml:space="preserve">
     <value>position Label Product</value>
@@ -1625,6 +1625,9 @@ Do you want the process to continue?</value>
   <data name="Reseller" xml:space="preserve">
     <value>Reseller</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
   <data name="Restore" xml:space="preserve">
     <value>Restore</value>
   </data>
@@ -1890,7 +1893,7 @@ Do you want the process to continue?</value>
     <value>Add Data</value>
   </data>
   <data name="tax" xml:space="preserve">
-    <value>tax</value>
+    <value>Tax</value>
   </data>
   <data name="Tax (%)" xml:space="preserve">
     <value>Tax (%)</value>

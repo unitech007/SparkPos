@@ -169,7 +169,14 @@ namespace SparkPOS.App.Cashier.Transactions
                             break;
                     }
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    MainProgram.LogException(ex);
+                    // Error handling and logging
+                    var msg = MainProgram.GlobalWarningMessage();
+                    MsgHelper.MsgWarning(msg);
+                    //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
+                }
             };
 
             grid.QueryCellInfo += delegate(object sender, GridQueryCellInfoEventArgs e)

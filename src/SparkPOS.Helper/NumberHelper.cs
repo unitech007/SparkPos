@@ -70,8 +70,9 @@ namespace SparkPOS.Helper
                     s = "0";
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
                 s = "0";
             }
 
@@ -87,8 +88,9 @@ namespace SparkPOS.Helper
                 if (s.Length == 0)
                     s = "0";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
                 s = "0";
             }
 
@@ -105,8 +107,9 @@ namespace SparkPOS.Helper
                 if (s.Length == 0)
                     s = "0";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
                 s = "0";
             }
 
@@ -127,8 +130,10 @@ namespace SparkPOS.Helper
                 // Parse the modified string to a double and return the result
                 return double.Parse(s);
             }
-            catch (FormatException)
+            //catch (FormatException)
+            catch(Exception ex)
             {
+                MainProgram.LogException(ex);
                 // If an exception occurs during parsing due to an invalid format, set the string to "0"
                 return 0;
             }

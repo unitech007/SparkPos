@@ -428,8 +428,13 @@ namespace SparkPOS.App.Transactions
                         if (chkPrintInvoicePurchase.Checked)
                             PrintInvoice(_beli.purchase_id);
                     }
-                    catch(Exception ex)
-                    {                        
+                    catch (Exception ex)
+                    {
+                        MainProgram.LogException(ex);
+                        // Error handling and logging
+                        var msg = MainProgram.GlobalWarningMessage();
+                        MsgHelper.MsgWarning(msg);
+                        //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                     }
 
                     Listener.Ok(this, _isNewData, _beli);
@@ -903,11 +908,13 @@ namespace SparkPOS.App.Transactions
         {
             if (MainProgram.currentLanguage == "en-US")
             {
-                this.label10.Text = "F1: Add data product | F2: Add data customer | F3: Add data dropshipper | F5: Edit quantity | F6: Edit discount | F7: Edit price | F8: Pay";
+                //this.label10.Text = "F1: Add data product | F2: Add data customer | F3: Add data dropshipper | F5: Edit quantity | F6: Edit discount | F7: Edit price | F8: Pay";
+                this.label10.Text = "F1: Add data product | F2: Add data supplier";
             }
             else if (MainProgram.currentLanguage == "ar-SA")
             {
-                this.label10.Text = "F1: إضافة منتج البيانات | F2: إضافة بيانات الزبون | F3: إضافة بيانات دروبشيبر | F5: تعديل الكمية | F6: تعديل الخصم | F7: تعديل السعر | F8: الدفع";
+                //this.label10.Text = "F1: إضافة منتج البيانات | F2: إضافة مورد البيانات | F3: إضافة بيانات دروبشيبر | F5: تعديل الكمية | F6: تعديل الخصم | F7: تعديل السعر | F8: الدفع";
+                this.label10.Text = "F1: إضافة منتج البيانات | F2: إضافة مورد البيانات";
             }
         }
         private void gridControl_CellClick(object sender, GridCellClickEventArgs e)

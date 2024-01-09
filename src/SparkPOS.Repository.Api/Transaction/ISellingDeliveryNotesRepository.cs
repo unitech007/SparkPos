@@ -61,7 +61,8 @@ namespace SparkPOS.Repository.Api
         IList<SellingDeliveryNotes> GetByDate(DateTime tanggalMulai, DateTime tanggalSelesai, string name);
 
         IList<SellingDeliveryNotes> GetByLimit(DateTime tanggalMulai, DateTime tanggalSelesai, int limit);
+        //IList<ItemSellingDeliveryNotes> GetItemDeliveryNotes(string deliveryNotesId);
 
-       // IList<ItemSellingDeliveryNotes> GetItemSelling(string jualId);
+        // IList<ItemSellingDeliveryNotes> GetItemSelling(string jualId);
     }
 }

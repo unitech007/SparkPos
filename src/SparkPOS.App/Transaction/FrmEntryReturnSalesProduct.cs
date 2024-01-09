@@ -605,8 +605,13 @@ namespace SparkPOS.App.Transactions
                             else
                                 MsgHelper.MsgWarning("Sorry, quantity return should not exceeds  quantity sale");
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            MainProgram.LogException(ex);
+                            // Error handling and logging
+                            var msg = MainProgram.GlobalWarningMessage();
+                            MsgHelper.MsgWarning(msg);
+                            //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                         }
 
                         break;

@@ -53,8 +53,12 @@ namespace SparkPOS.Helper
                 else
                     result = defaultValue;
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
 
             return result ;
@@ -82,8 +86,12 @@ namespace SparkPOS.Helper
                 configuration.Save(ConfigurationSaveMode.Modified, false);
                 ConfigurationManager.RefreshSection(SECTION_NAME);
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
         }
     }

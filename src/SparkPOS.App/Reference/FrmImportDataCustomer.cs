@@ -78,11 +78,19 @@ namespace SparkPOS.App.Reference
                         Process.Start(fileMaster);
                     }
                 }
-                catch
-                {
-                    msg = "Key-FailedMaster";
+                //catch
+                //{
+                //    msg = "Key-FailedMaster";
 
-                    MsgHelper.MsgWarning(msg, ImportTitle);
+                //    MsgHelper.MsgWarning(msg, ImportTitle);
+                //}
+                catch (Exception ex)
+                {
+                    MainProgram.LogException(ex);
+                    // Error handling and logging
+                    var msg1 = MainProgram.GlobalWarningMessage();
+                    MsgHelper.MsgWarning(msg1);
+                    //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                 }
             }
         }

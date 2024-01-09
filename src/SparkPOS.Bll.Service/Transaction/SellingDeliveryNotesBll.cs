@@ -413,7 +413,8 @@ namespace SparkPOS.Bll.Service.Transaction
             }
             catch (Exception ex)
             {
-//_ILogger.LogError(ex);
+                Config.LogException(ex);
+                //_ILogger.LogError(ex);
 
                 return 0;
             }

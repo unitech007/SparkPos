@@ -684,9 +684,17 @@ namespace SparkPOS.App.Transactions
                             }
                         }
                     }
+                    //catch (Exception ex)
+                    //{
+                    //    _log.Error("Error:", ex);
+                    //}
                     catch (Exception ex)
                     {
-                        _log.Error("Error:", ex);
+                        MainProgram.LogException(ex);
+                        // Error handling and logging
+                        var msg = MainProgram.GlobalWarningMessage();
+                        MsgHelper.MsgWarning(msg);
+                        //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                     }
 
                     Listener.Ok(this, _isNewData, _jual);
@@ -1862,8 +1870,13 @@ namespace SparkPOS.App.Transactions
                     cmbKurir.Text = string.Format("{0} {1}", ongkir.kurir_code, ongkir.service);
                     txtCostShipping.Text = ongkir.cost[0].value.ToString();
                 }
-                catch
+                catch (Exception ex)
                 {
+                    MainProgram.LogException(ex);
+                    // Error handling and logging
+                    var msg = MainProgram.GlobalWarningMessage();
+                    MsgHelper.MsgWarning(msg);
+                    //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                 }
             }
         }

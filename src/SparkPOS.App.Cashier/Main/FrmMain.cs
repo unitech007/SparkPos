@@ -145,9 +145,17 @@ namespace SparkPOS.App.Cashier.Main
                         {
                             AutoUpdater.DownloadUpdate();
                         }
-                        catch (Exception exception)
+                        //catch (Exception exception)
+                        //{
+                        //    MessageBox.Show(exception.Message, exception.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //}
+                        catch (Exception ex)
                         {
-                            MessageBox.Show(exception.Message, exception.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MainProgram.LogException(ex);
+                            // Error handling and logging
+                            var msg1 = MainProgram.GlobalWarningMessage();
+                            MsgHelper.MsgWarning(msg1);
+                            //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                         }
                     }
                 }

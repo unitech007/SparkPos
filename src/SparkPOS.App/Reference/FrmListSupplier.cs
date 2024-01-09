@@ -264,10 +264,18 @@ namespace SparkPOS.App.Reference
                 {
                     Process.Start(fileMaster);
                 }
-                catch
+                //catch
+                //{
+                //    msg = "Key-FailedSupplier";
+                //    MsgHelper.MsgError(msg);
+                //}
+                catch (Exception ex)
                 {
-                    msg = "Key-FailedSupplier";
-                    MsgHelper.MsgError(msg);
+                    MainProgram.LogException(ex);
+                    // Error handling and logging
+                    var msg1 = MainProgram.GlobalWarningMessage();
+                    MsgHelper.MsgWarning(msg1);
+                    //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                 }
             }
         }

@@ -38,8 +38,12 @@ namespace SparkPOS.Helper
                 var desc = 0;
                 result = InternetGetConnectedState(out desc, 0);
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
 
             return result;

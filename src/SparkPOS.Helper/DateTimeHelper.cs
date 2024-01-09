@@ -45,8 +45,12 @@ namespace SparkPOS.Helper
                 result = date == DateTime.MinValue || date == new DateTime(1753, 1, 1) ||
                          date == new DateTime(0001, 1, 1);
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
 
             return result;
@@ -66,8 +70,12 @@ namespace SparkPOS.Helper
                 if (!(date == DateTime.MinValue || date == new DateTime(1753, 1, 1)))
                     result = string.Format("{0:" + format + "}", date);
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
 
             return result;
@@ -132,8 +140,12 @@ namespace SparkPOS.Helper
 
                 result = true;
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
 
             return result;

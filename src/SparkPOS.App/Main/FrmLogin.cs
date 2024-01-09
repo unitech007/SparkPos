@@ -353,10 +353,11 @@ namespace SparkPOS.App.Main
             }
             catch (Exception ex)
             {
+                MainProgram.LogException(ex);
                 // Error handling and logging
-               var msg =  MainProgram.GlobalWarningMessage();
+                var msg =  MainProgram.GlobalWarningMessage();
                 MsgHelper.MsgWarning(msg);
-                WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
+                //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
             }
         }
 
