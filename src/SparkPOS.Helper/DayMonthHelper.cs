@@ -37,8 +37,9 @@ namespace SparkPOS.Helper
             {
                 return (date == DateTime.MinValue || date == new DateTime(1753, 1, 1));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
                 return false;
             }
         }

@@ -54,8 +54,9 @@ namespace SparkPOS.Bll.Service
             {
                 _workbook = new XLWorkbook(_fileName);
             }
-            catch
+            catch(Exception ex)
             {
+                Config.LogException(ex);
                 result = true;
             }
 
@@ -87,8 +88,9 @@ namespace SparkPOS.Bll.Service
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                Config.LogException(ex);
                 result = false;
             }
 
@@ -195,6 +197,7 @@ namespace SparkPOS.Bll.Service
             }
             catch (Exception ex)
             {
+                 Config.LogException(ex);
                 _log.Error("Error:", ex);
             }
             finally
@@ -260,6 +263,7 @@ namespace SparkPOS.Bll.Service
             }
             catch (Exception ex)
             {
+                Config.LogException(ex);
                 _log.Error("Error:", ex);
             }    
         }

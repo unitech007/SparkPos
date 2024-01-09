@@ -51,7 +51,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return obj;
@@ -67,8 +67,9 @@ namespace SparkPOS.Repository.Service
                               .Where(f => f.name_menu.ToLower() == name.ToLower())
                               .SingleOrDefault();
             }
-            catch
+            catch(Exception ex)
             {
+                DapperContext.LogException(ex);
             }
 
             return obj;
@@ -85,7 +86,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -104,7 +105,7 @@ namespace SparkPOS.Repository.Service
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return result;

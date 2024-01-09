@@ -66,8 +66,12 @@ namespace SparkPOS.Helper
                 serial.Write(command, 0, 4);
                 //SetCursorToLine(serial, Line.One);
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "Something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
+
             }
         }
 

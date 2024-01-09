@@ -62,8 +62,9 @@ namespace SparkPOS.Model
                 result = date == DateTime.MinValue || date == new DateTime(1753, 1, 1) ||
                          date == new DateTime(0001, 1, 1) || date == null;
             }
-            catch
+            catch(Exception ex)
             {
+                Log.LogException(ex);
             }
 
             return result;

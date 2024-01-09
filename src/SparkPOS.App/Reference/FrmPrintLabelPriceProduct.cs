@@ -488,9 +488,14 @@ namespace SparkPOS.App.Reference
                             var labelPrice = _listOfLabelPriceProduct[index];
                             DrawString(labelPrice, e.Graphics, brush, nLeft, nTop);
                         }
-                        catch
+                        catch (Exception ex)
                         {
-                        } 
+                            MainProgram.LogException(ex);
+                            // Error handling and logging
+                            var msg = MainProgram.GlobalWarningMessage();
+                            MsgHelper.MsgWarning(msg);
+                            //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
+                        }
                     }
 
                 }

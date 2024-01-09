@@ -30,6 +30,7 @@ using SparkPOS.Model;
 using SparkPOS.Helper;
 using SparkPOS.App.Cashier.Main;
 using MultilingualApp;
+using System.IO;
 
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
 namespace SparkPOS.App.Cashier
@@ -136,6 +137,56 @@ namespace SparkPOS.App.Cashier
                 LanguageHelper.ChangeLanguage(frmtoChange, "en-US");
 
             }
+        }
+        public static void LogException(Exception ex)
+        {
+            string logFileName = "SparkPOS_Error_log.txt";
+            string logFilePath = Path.Combine(
+                System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                logFileName
+            );
+
+            // Check if the file exists
+            if (!File.Exists(logFilePath))
+            {
+                // Create the file if it doesn't exist
+                using (StreamWriter createFile = File.CreateText(logFilePath))
+                {
+                    createFile.Close();
+                }
+            }
+
+            // Append exception information to the file
+            using (StreamWriter writer = File.AppendText(logFilePath))
+            {
+                //writer.WriteLine("MachineName: " + Environment.MachineName);
+                //writer.WriteLine("Exception Message: " + ex.Message);
+                //writer.WriteLine("Stack Trace: " + ex.StackTrace);
+                //if (ex.InnerException != null)
+                //{
+                //    writer.WriteLine("Inner Exception: " + ex.InnerException);
+                //}
+                writer.WriteLine("Timestamp: " + DateTime.Now.ToString());
+                writer.WriteLine("Exception Message: " + ex.ToString());
+                writer.WriteLine("-----------------------------------------------");
+            }
+        }
+        public static string GlobalWarningMessage()
+        {
+            var usMsg = "An error occurred. Please check the error log for details.";
+            var saMsg = "حدث خطأ. يرجى التحقق من سجل الأخطاء للحصول على التفاصيل.";
+            //GetWarningMessageLanguage();
+            if (MainProgram.currentLanguage == "ar-SA")
+            {
+                return saMsg;
+
+            }
+            else if (MainProgram.currentLanguage == "en-US")
+            {
+
+                return usMsg;
+            }
+            return usMsg;
         }
         static void Login()
         {

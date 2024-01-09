@@ -41,6 +41,7 @@ namespace SparkPOS.Model
            // is_sdac = true;
             item_jual = new List<ItemSellingDeliveryNotes>();
             item_jual_deleted = new List<ItemSellingDeliveryNotes>();
+          
         }
 
         [ExplicitKey]
@@ -258,8 +259,11 @@ namespace SparkPOS.Model
             get { return grand_total - total_payment; }
         }
 
+        //[Write(false)]
+        //public List<ISellingDeliveryNotes> item_deliverynotes { get; set; }
         [Write(false)]
         public List<ItemSellingDeliveryNotes> item_jual { get; set; }
+
 
         [Write(false)]
         public List<ItemSellingDeliveryNotes> item_jual_deleted { get; set; }

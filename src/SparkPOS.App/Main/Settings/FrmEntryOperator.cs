@@ -78,11 +78,13 @@ namespace SparkPOS.App.Settings
                 if (this._operator.Role != null)
                     cmbRole.SelectedItem = this._operator.Role.name_role;
             }
-            catch
+            catch (Exception ex)
             {
-
-                if (listOfRole.Count > 0)
-                    cmbRole.SelectedIndex = 0;
+                MainProgram.LogException(ex);
+                // Error handling and logging
+                var msg =  MainProgram.GlobalWarningMessage();
+                MsgHelper.MsgWarning(msg);
+                //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
             }
 
             if (this._operator.is_active)

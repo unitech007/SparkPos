@@ -226,9 +226,12 @@ namespace SparkPOS.BackupAndRestore.Main
 	            {	        
                     info.EnvironmentVariables.Add("PGPASSWORD", _pgPassword); 
 	            }
-	            catch
-	            {
-	            }
+                catch (Exception ex)
+                {
+                    MainProgram.LogException(ex);
+                    //var msg = "something wrong check error log";
+                    //MsgHelper.MsgWarning(msg);
+                }
 
                 var proc = new System.Diagnostics.Process();
                 proc.StartInfo = info;
@@ -248,9 +251,12 @@ namespace SparkPOS.BackupAndRestore.Main
             }
             catch (Exception ex)
             {
-                MsgHelper.MsgError(ex.Message);
+                MainProgram.LogException(ex);
+                //var msg = "something wrong check error log";
+                //MsgHelper.MsgWarning(ex.Message);
             }
-        }                
+
+        }
 
         private bool IsOpenConnection()
         {
@@ -292,9 +298,13 @@ namespace SparkPOS.BackupAndRestore.Main
                     result = true;
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                MainProgram.LogException(ex);
+                //var msg = "something wrong check error log";
+                //MsgHelper.MsgWarning(msg);
             }
+
 
             return result;
         }

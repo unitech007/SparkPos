@@ -52,6 +52,7 @@ namespace SparkPOS.Logger
         //}
 
         // Add more logging methods as per your requirements (e.g., LogInfo, LogWarning, etc.)
+
     }
 
 }

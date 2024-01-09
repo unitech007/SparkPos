@@ -506,26 +506,26 @@ namespace SparkPOS.App.Transactions
         }
 
 
-        //protected override void Edit()
-        //{
-        //    var index = this.gridList.SelectedIndex;
+        protected override void Edit()
+        {
+            var index = this.gridList.SelectedIndex;
 
-        //    if (!base.IsSelectedItem(index, this.TabText))
-        //        return;
+            if (!base.IsSelectedItem(index, this.TabText))
+                return;
 
-        //    using (new StCursor(Cursors.WaitCursor, new TimeSpan(0, 0, 0, 0)))
-        //    {
-        //        var sale = _listOfSelling[index];
-        //       // sale.tanggal_creditTerm_old = sale.due_date;
-        //        sale.item_jual = _bll.GetItemSelling(sale.delivery_id).ToList();
+            using (new StCursor(Cursors.WaitCursor, new TimeSpan(0, 0, 0, 0)))
+            {
+                var sale = _listOfSelling[index];
+              //sale.tanggal_creditTerm_old = sale.due_date;
+              //sale.item_jual = _bll.GetItemDeliveryNotes(sale.delivery_id).ToList();
 
-        //        LogicalThreadContext.Properties["OldValue"] = sale.ToJson();
+                LogicalThreadContext.Properties["OldValue"] = sale.ToJson();
 
-        //        var frm = new FrmEntrySalesDeliveryNotes("Edit Data " + this.Text, sale, _bll);
-        //        frm.Listener = this;
-        //        frm.ShowDialog();
-        //    }
-        //    }
+                var frm = new FrmEntrySalesDeliveryNotes("Edit Data " + this.Text, sale, _bll);
+                frm.Listener = this;
+               frm.ShowDialog();
+           }
+            }
 
         protected override void Delete()
         {
@@ -697,6 +697,11 @@ namespace SparkPOS.App.Transactions
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPerbaiki_MouseClick(object sender, MouseEventArgs e)
         {
 
         }

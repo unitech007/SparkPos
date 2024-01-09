@@ -56,13 +56,13 @@ namespace SparkPOS.App.Transactions
         private IList<ItemSellingQuotation> _listOfItemSelling = new List<ItemSellingQuotation>();
         private IList<ItemSellingQuotation> _listOfItemSellingOld = new List<ItemSellingQuotation>();
         private IList<ItemSellingQuotation> _listOfItemSellingDeleted = new List<ItemSellingQuotation>();
-        
+
         private int _rowIndex = 0;
         private int _colIndex = 0;
 
         private ILogger _ILogger = Logger.Logger.GetInstance;
         //_ILogger.LogError(filterContext.Exception.ToString());
-      
+
 
         private bool _isNewData = false;
         private ILog _log;
@@ -74,10 +74,10 @@ namespace SparkPOS.App.Transactions
 
         public IListener Listener { private get; set; }
 
-        public FrmEntrySalesQuotation(string header, ISellingQuotationBll bll) 
+        public FrmEntrySalesQuotation(string header, ISellingQuotationBll bll)
             : base()
-        {            
-             InitializeComponent();
+        {
+            InitializeComponent();
             ColorManagerHelper.SetTheme(this, this);
 
             base.SetHeader(header);
@@ -114,7 +114,7 @@ namespace SparkPOS.App.Transactions
         public FrmEntrySalesQuotation(string header, SellingQuotation sale, ISellingQuotationBll bll)
             : base()
         {
-             InitializeComponent(); 
+            InitializeComponent();
 
             ColorManagerHelper.SetTheme(this, this);
 
@@ -135,7 +135,7 @@ namespace SparkPOS.App.Transactions
             dtpDate.Value = (DateTime)this._jual.date;
             //dtpDateCreditTerm.Value = dtpDate.Value;
             btnPreviewInvoice.Visible = _GeneralSupplier.type_printer == TypePrinter.InkJet;
-                        
+
             chkDropship.Checked = this._jual.is_dropship;
             SetSettingsPrinter();
 
@@ -152,7 +152,7 @@ namespace SparkPOS.App.Transactions
                 txtDropshipper.Text = this._dropshipper.name_dropshipper;
 
             txtKeterangan.Text = this._jual.description;
-            
+
             if (!string.IsNullOrEmpty(this._jual.courier))
                 cmbKurir.Text = this._jual.courier;
 
@@ -171,12 +171,12 @@ namespace SparkPOS.App.Transactions
                     selling_price = item.selling_price
                 });
             }
-            
+
             _listOfItemSelling = this._jual.item_jual;
             _listOfItemSelling.Add(new ItemSellingQuotation()); // add dummy objek
 
             InitGridControl(gridControl);
-          //  MainProgram.GlobalLanguageChange(this);
+            //  MainProgram.GlobalLanguageChange(this);
             RefreshTotal();
 
             DisplayOpeningSentence();
@@ -204,18 +204,18 @@ namespace SparkPOS.App.Transactions
             gridListProperties.Add(new GridListControlProperties { Header = "No", Width = 30 });
             gridListProperties.Add(new GridListControlProperties { Header = "Code Product", Width = 120 });
 
-            gridListProperties.Add(new GridListControlProperties 
-                { 
-                    Header = "Name Product", 
-                    Width = _GeneralSupplier.is_show_additional_sales_item_information ? 390 : 500
-                }
+            gridListProperties.Add(new GridListControlProperties
+            {
+                Header = "Name Product",
+                Width = _GeneralSupplier.is_show_additional_sales_item_information ? 390 : 500
+            }
             );
 
-            gridListProperties.Add(new GridListControlProperties 
-                { 
-                    Header = _GeneralSupplier.additional_sales_item_information,
-                    Width = _GeneralSupplier.is_show_additional_sales_item_information ? 110 : 0
-                }
+            gridListProperties.Add(new GridListControlProperties
+            {
+                Header = _GeneralSupplier.additional_sales_item_information,
+                Width = _GeneralSupplier.is_show_additional_sales_item_information ? 110 : 0
+            }
             );
 
             gridListProperties.Add(new GridListControlProperties { Header = "quantity", Width = 50 });
@@ -226,7 +226,7 @@ namespace SparkPOS.App.Transactions
 
             GridListControlHelper.InitializeGridListControl<ItemSellingQuotation>(grid, _listOfItemSelling, gridListProperties);
 
-            grid.PushButtonClick += delegate(object sender, GridCellPushButtonClickEventArgs e)
+            grid.PushButtonClick += delegate (object sender, GridCellPushButtonClickEventArgs e)
             {
                 if (e.ColIndex == 9)
                 {
@@ -248,11 +248,11 @@ namespace SparkPOS.App.Transactions
                         grid.Refresh();
 
                         RefreshTotal();
-                    }                    
+                    }
                 }
             };
 
-            grid.QueryCellInfo += delegate(object sender, GridQueryCellInfoEventArgs e)
+            grid.QueryCellInfo += delegate (object sender, GridQueryCellInfoEventArgs e)
             {
                 // Make sure the cell falls inside the grid
                 if (e.RowIndex > 0)
@@ -329,7 +329,7 @@ namespace SparkPOS.App.Transactions
                                 {
                                     quantity = itemSelling.quantity - itemSelling.return_quantity;
                                     hargaSelling = GetPriceSellingFix(product, quantity, product.selling_price);
-                                }                                    
+                                }
                             }
 
                             e.Style.CellValue = NumberHelper.NumberToString(hargaSelling);
@@ -343,7 +343,7 @@ namespace SparkPOS.App.Transactions
                             quantity = itemSelling.quantity - itemSelling.return_quantity;
 
                             hargaPurchase = itemSelling.purchase_price;
-                            hargaSelling = itemSelling.harga_setelah_diskon;                            
+                            hargaSelling = itemSelling.harga_setelah_diskon;
 
                             if (product != null)
                             {
@@ -355,7 +355,7 @@ namespace SparkPOS.App.Transactions
                                     double discount = itemSelling.discount;
                                     double diskonRupiah = 0;
 
-                                    if(!(discount > 0))
+                                    if (!(discount > 0))
                                     {
                                         if (_customer != null)
                                         {
@@ -366,16 +366,16 @@ namespace SparkPOS.App.Transactions
                                         {
                                             var diskonProduct = GetDiskonSellingFix(product, quantity, product.discount);
                                             discount = diskonProduct > 0 ? diskonProduct : product.Category.discount;
-                                        }                                            
+                                        }
                                     }
 
                                     hargaSelling = GetPriceSellingFix(product, quantity, product.selling_price);
 
                                     diskonRupiah = discount / 100 * hargaSelling;
                                     hargaSelling -= diskonRupiah;
-                                }                                    
+                                }
                             }
-                            
+
                             e.Style.CellValue = NumberHelper.NumberToString(quantity * hargaSelling);
                             break;
 
@@ -404,19 +404,19 @@ namespace SparkPOS.App.Transactions
             grid.CurrentCell.MoveTo(1, colIndex, GridSetCurrentCellOptions.BeginEndUpdate);
         }
 
-       
-private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
+
+        private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
         {
             double total = 0;
             foreach (var item in _listOfItemSelling.Where(f => f.Product != null))
             {
                 double price = 0;
-               var quantity = item.quantity - item.return_quantity;
+                var quantity = item.quantity - item.return_quantity;
 
                 if (item.selling_price > 0)
                 {
                     price = item.harga_setelah_diskon;
-                }                    
+                }
                 else
                 {
                     if (item.Product != null)
@@ -451,7 +451,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
         private PriceWholesale GetPriceWholesale(Product product, double quantity)
         {
             PriceWholesale hargaWholesale = null;
-            
+
             if (product.list_of_harga_grosir.Count(f => f.minimum_quantity > 0) > 0)
             {
                 hargaWholesale = product.list_of_harga_grosir
@@ -461,7 +461,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                 // price grosir tidak there yang cocok, set price retil
                 if (hargaWholesale == null)
                     hargaWholesale = new PriceWholesale { retail_price = 1, wholesale_price = product.selling_price, discount = product.discount };
-            }            
+            }
 
             return hargaWholesale;
         }
@@ -478,7 +478,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                     if (grosir.wholesale_price > 0)
                         result = grosir.wholesale_price;
                 }
-            }            
+            }
 
             return result;
         }
@@ -495,7 +495,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                     if (grosir.discount > 0)
                         result = grosir.discount;
                 }
-            }            
+            }
 
             return result;
         }
@@ -537,45 +537,45 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                 return;
             }
 
-      //      if (rdoKredit.Checked)
-      //      {
-      //          if (!DateTimeHelper.IsValidRangeDate(dtpDate.Value, dtpDateCreditTerm.Value))
-      //          {
-      //              MsgHelper.MsgNotValidRangeDate();
-      //              return;
-      //          }
+            //      if (rdoKredit.Checked)
+            //      {
+            //          if (!DateTimeHelper.IsValidRangeDate(dtpDate.Value, dtpDateCreditTerm.Value))
+            //          {
+            //              MsgHelper.MsgNotValidRangeDate();
+            //              return;
+            //          }
 
-      //          total = NumberHelper.StringToDouble(lblTotal.Text);
+            //          total = NumberHelper.StringToDouble(lblTotal.Text);
 
-      //          if (this._customer != null)
-      //          {
-      //              if (this._customer.credit_limit > 0)
-      //              {
-      //                  if (!(this._customer.credit_limit >= (total + this._customer.remaining_credit)))
-      //                  {
-      //                      var msg = string.Empty;
+            //          if (this._customer != null)
+            //          {
+            //              if (this._customer.credit_limit > 0)
+            //              {
+            //                  if (!(this._customer.credit_limit >= (total + this._customer.remaining_credit)))
+            //                  {
+            //                      var msg = string.Empty;
 
-      //                      if (this._customer.remaining_credit > 0)
-      //                      {
-      //                          msg = "Sorry, the maximum credit limit for customer '{0}' is: {1}" +
-      //"\nCurrently, customer '{0}' still has a credit of: {2}";
+            //                      if (this._customer.remaining_credit > 0)
+            //                      {
+            //                          msg = "Sorry, the maximum credit limit for customer '{0}' is: {1}" +
+            //"\nCurrently, customer '{0}' still has a credit of: {2}";
 
-      //                          msg = string.Format(msg, this._customer.name_customer, NumberHelper.NumberToString(this._customer.credit_limit), NumberHelper.NumberToString(this._customer.remaining_credit));
-      //                      }
-      //                      else
-      //                      {
-      //                          msg = "Sorry, the maximum credit limit for customer '{0}' is: {1}";
+            //                          msg = string.Format(msg, this._customer.name_customer, NumberHelper.NumberToString(this._customer.credit_limit), NumberHelper.NumberToString(this._customer.remaining_credit));
+            //                      }
+            //                      else
+            //                      {
+            //                          msg = "Sorry, the maximum credit limit for customer '{0}' is: {1}";
 
 
-      //                          msg = string.Format(msg, this._customer.name_customer, NumberHelper.NumberToString(this._customer.credit_limit));
-      //                      }
+            //                          msg = string.Format(msg, this._customer.name_customer, NumberHelper.NumberToString(this._customer.credit_limit));
+            //                      }
 
-      //                      MsgHelper.MsgWarning(msg);
-      //                      return;
-      //                  }
-      //              }
-      //          }
-      //      }
+            //                      MsgHelper.MsgWarning(msg);
+            //                      return;
+            //                  }
+            //              }
+            //          }
+            //      }
 
             if (!MsgHelper.MsgConfirmation("Do you want the process to continue ?"))
                 return;
@@ -597,8 +597,8 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
 
             _jual.quotation = txtquotation.Text;
             _jual.date = dtpDate.Value;
-           // _jual.due_date = DateTimeHelper.GetNullDateTime();
-           // _jual.is_cash = rdoCash.Checked;
+            // _jual.due_date = DateTimeHelper.GetNullDateTime();
+            // _jual.is_cash = rdoCash.Checked;
             _jual.payment_cash = jumlahPay;
 
             //if (rdoKredit.Checked) // sales Credit
@@ -852,7 +852,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
 
                 ItemSellingQuotation itemSelling = null;
 
-              //  cek item product already entered atau Not yet ?
+                //  cek item product already entered atau Not yet ?
                 var itemProduct = GetExistItemProduct(product.product_id);
 
                 if (itemProduct != null) // already there, tinggal update quantity
@@ -898,7 +898,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                         //else
                         //    GridListControlHelper.SetCurrentCell(this.gridControl, _rowIndex + 1, 2); // fokus kerow berikutnya
                     }
-                }                                
+                }
             }
             else if (data is Customer) // pencarian customer
             {
@@ -933,8 +933,13 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                     cmbKurir.Text = string.Format("{0} {1}", ongkir.kurir_code, ongkir.service);
                     txtCostShipping.Text = ongkir.cost[0].value.ToString();
                 }
-                catch
+                catch (Exception ex)
                 {
+                    MainProgram.LogException(ex);
+                    // Error handling and logging
+                    var msg = MainProgram.GlobalWarningMessage();
+                    MsgHelper.MsgWarning(msg);
+                    //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                 }
             }
         }
@@ -1298,7 +1303,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
                             if (!isValidStock)
                             {
                                 var msg = "Key-RemainingStock";
-                                object[] params1 = new object[] { product.remaining_stock, itemSelling.quantity , product.remaining_stock + itemSelling.old_jumlah - itemSelling.quantity };
+                                object[] params1 = new object[] { product.remaining_stock, itemSelling.quantity, product.remaining_stock + itemSelling.old_jumlah - itemSelling.quantity };
                                 MsgHelper.MsgWarnings(msg, params1);
                                 GridListControlHelper.SelectCellText(grid, rowIndex, colIndex);
 
@@ -1649,7 +1654,7 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
             parameters.Add(new ReportParameter("footer", _user.name_user));
 
             var reportName = chkDropship.Checked ? "RvInvoiceSalesQuotationTanpaLabel - Copy" : "RvInvoiceSalesQuotationTanpaLabel - Copy";
-          //  var reportName = chkDropship.Checked ? "RvInvoiceSalesQuotationTanpaLabel - Copy - Copy" : "RvInvoiceSalesQuotationTanpaLabel - Copy - Copy";
+            //  var reportName = chkDropship.Checked ? "RvInvoiceSalesQuotationTanpaLabel - Copy - Copy" : "RvInvoiceSalesQuotationTanpaLabel - Copy - Copy";
 
             var frmPreviewReport = new FrmPreviewReport("Preview Invoice Sales", reportName, reportDataSource, parameters, true);
             frmPreviewReport.ShowDialog();
@@ -1723,6 +1728,70 @@ private double SumGrid(IList<ItemSellingQuotation> listOfItemSelling)
 
         }
 
+
+        private void FrmEntrySalesQuotation_KeyDown(object sender, KeyEventArgs e)
+        {
+            Shortcut(sender, e);
+        }
+
+        private void FrmEntrySalesQuotation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void Shortcut(object sender, KeyEventArgs e)
+        {
+            if (KeyPressHelper.IsShortcutKey(Keys.F1, e)) // tambah data product
+            {
+                ShowEntryProduct();
+            }
+            else if (KeyPressHelper.IsShortcutKey(Keys.F2, e)) // Optional data customer
+            {
+                // kasus khusus untuk shortcut F2, tidak jalan jika dipanggil melalui event Form KeyDown, 
+                // must di panggil di event gridControl_KeyDown
+                ShowEntryCustomer();
+            }
+            else if (KeyPressHelper.IsShortcutKey(Keys.F3, e)) // Optional data dropshipper
+            {
+                ShowEntryDropshipper();
+            }
+            else if (KeyPressHelper.IsShortcutKey(Keys.F5, e) || KeyPressHelper.IsShortcutKey(Keys.F6, e) || KeyPressHelper.IsShortcutKey(Keys.F7, e))
+            {
+                var colIndex = 5;
+                var rowIndex = this.gridControl.CurrentCell.RowIndex;
+
+                switch (e.KeyCode)
+                {
+                    case Keys.F5: // edit quantity
+                        colIndex = 5;
+                        break;
+
+                    case Keys.F6: // edit discount
+                        colIndex = 6;
+                        break;
+
+                    case Keys.F7: // edit price
+                        colIndex = 7;
+                        break;
+
+                    default:
+                        break;
+                }
+
+                if (gridControl.RowCount > 1 && gridControl.RowCount == rowIndex)
+                {
+                    gridControl.Focus();
+                    GridListControlHelper.SetCurrentCell(gridControl, _listOfItemSelling.Count - 1, colIndex);
+                }
+            }
+            else if (KeyPressHelper.IsShortcutKey(Keys.F8, e)) // pay
+            {
+                txtJumlahPay.Text = "0";
+                txtReturn.Text = "0";
+                txtJumlahPay.Focus();
+            }
+        }
         //private void chkDropship_CheckedChanged(object sender, EventArgs e)
         //{
         //    var chk = (CheckBox)sender;

@@ -230,6 +230,7 @@ namespace SparkPOS.Bll.Service
             }
             catch (Exception ex)
             {
+                Config.LogException(ex);
                 //_ILogger.LogError(ex);
 
                 return 0;

@@ -82,7 +82,7 @@ INNER JOIN public.t_cash_advance_payment ON t_cash_advance_payment.loan_id = t_l
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -104,7 +104,7 @@ INNER JOIN public.t_cash_advance_payment ON t_cash_advance_payment.loan_id = t_l
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -125,7 +125,7 @@ INNER JOIN public.t_cash_advance_payment ON t_cash_advance_payment.loan_id = t_l
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -147,7 +147,7 @@ INNER JOIN public.t_cash_advance_payment ON t_cash_advance_payment.loan_id = t_l
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -169,7 +169,7 @@ INNER JOIN public.t_cash_advance_payment ON t_cash_advance_payment.loan_id = t_l
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;
@@ -190,7 +190,7 @@ INNER JOIN public.t_cash_advance_payment ON t_cash_advance_payment.loan_id = t_l
             }
             catch (Exception ex)
             {
-                _log.Error("Error:", ex);
+                 DapperContext.LogException(ex);
             }
 
             return oList;

@@ -132,8 +132,9 @@ namespace SparkPOS.Helper.UserControl
 
                     BackgroundImage = resultImage;
                 }
-                catch
+                catch(Exception ex)
                 {
+                    MainProgram.LogException(ex);
                     BackgroundImage = null;
                 }
             }

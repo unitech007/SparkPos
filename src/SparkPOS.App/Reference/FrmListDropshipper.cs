@@ -244,11 +244,19 @@ namespace SparkPOS.App.Reference
                 {
                     Process.Start(fileMaster);
                 }
-                catch
-                {
-                    msg = "Key-DropshipperFile";
+                //catch
+                //{
+                //    msg = "Key-DropshipperFile";
 
-                    MsgHelper.MsgError(msg);
+                //    MsgHelper.MsgError(msg);
+                //}
+                catch (Exception ex)
+                {
+                    MainProgram.LogException(ex);
+                    // Error handling and logging
+                    var msg1 = MainProgram.GlobalWarningMessage();
+                    MsgHelper.MsgWarning(msg1);
+                    //WarningMessageHandler.ShowTranslatedWarning(msg, MainProgram.currentLanguage);
                 }
             }
         }
